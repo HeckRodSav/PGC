@@ -1,0 +1,26 @@
+{
+	"content": [
+		{
+			"idProduto": 533110,
+			"numeroRegistro": "169930002",
+			"nomeProduto": "TYSABRI",
+			"expediente": "0321465245",
+			"razaoSocial": "BIOGEN BRASIL PRODUTOS FARMACÊUTICOS LTDA",
+			"cnpj": "07986222000174",
+			"numeroTransacao": "2594812024",
+			"data": "2024-03-14T21:34:05.000-0300",
+			"numProcesso": "25351216949200755",
+			"idBulaPacienteProtegido": ***,
+			"idBulaProfissionalProtegido": ***,
+			"dataAtualizacao": "2024-06-26T08:00:10.000-0300"
+		}
+	],
+	"totalElements": 1,
+	"totalPages": 1,
+	"last": true,
+	"numberOfElements": 1,
+	"first": true,
+	"sort": null,
+	"size": 10,
+	"number": 0
+}

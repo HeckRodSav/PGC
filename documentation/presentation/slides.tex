@@ -1,0 +1,78 @@
+\documentclass[11pt, svgnames, compress, handout]{beamer}
+% \documentclass[11pt, svgnames, compress, handout, showframe]{beamer}
+% \documentclass[11pt, svgnames, compress]{beamer}
+
+% \input{template/slideTemplate}
+\input{../template/slideTamplate}
+\input{../commands}
+\input{../capa}
+\renewcommand{\localLogo}{../template/logo_ufabc.png}
+
+\lstset{
+    basicstyle={\ttfamily\small},
+    frame=none,
+    captionpos=none,
+    xleftmargin=0em
+}
+
+\makeatletter
+\@removefromreset{subsection}{section}
+\makeatother
+\setcounter{subsection}{1}
+
+\setbeamertemplate{navigation symbols}{}%remove navigation symbols
+\usetheme{Dresden}
+\usefonttheme[onlymath]{serif}
+
+% \useoutertheme{miniframes}
+% \useoutertheme[subsection=false]{smoothbars}
+% \useinnertheme{rectangles}
+
+\title{\titulo}
+% \subtitle{Treinamento intensivo}
+\author[Heitor]{Heitor Rodrigues Savegnago}
+\institute[\centroSigla\ - UFABC]{\centro\\UFABC}
+\date{2024}
+
+% \setbeamercolor{structure}{fg=slideBlue}
+% \setbeamercolor{structure}{fg=slideCyan}
+% \setbeamercolor{structure}{fg=slideTurquoise}
+% \setbeamercolor{structure}{fg=slideGreen}
+% \setbeamercolor{structure}{fg=slideYellow}
+% \setbeamercolor{structure}{fg=slideOrange}
+% \setbeamercolor{structure}{fg=slideRed}
+% \setbeamercolor{structure}{fg=slidePurple}
+
+\usecolortheme[named=darkgray]{structure}
+
+\begin{document}
+
+    \frame{\titlepage}
+
+    \begin{frame}
+        \begin{multicols}{2}
+            \tableofcontents
+        \end{multicols}
+    \end{frame}
+
+    \input{../slides/1_intro}
+    \input{../slides/2_revisao_bib}
+    \input{../slides/3_metodologia}
+    \input{../slides/4_resultados}
+    \input{../slides/5_conclusão}
+
+    \section{Finalização}
+    \begin{frame}
+        \begin{center}
+            \VERYHuge \usebeamercolor[fg]{title}\textbf{Perguntas?}
+        \end{center}
+    \end{frame}
+
+    \begin{frame}
+        \begin{center}
+            \VERYHuge \usebeamercolor[fg]{title}\textbf{Obrigado!}
+        \end{center}
+    \end{frame}
+
+\end{document}
+|

@@ -1,0 +1,13 @@
+A necessidade de medicamentos de uso contínuo tem se tornando cada vez mais comum, especialmente com o aumento da longevidade da população.
+Junto da idade avançada também se torna mais comum a presença de problemas relacionados à visão, principalmente a presbiopia, que pode causar dificuldade de leitura.
+Estes fatores juntos podem trazer um novo problema, onde pacientes confundes embalagens de medicamentos por serem visualmente semelhantes.
+Este trabalho propõe um sistema capaz de identificar e trazer informações sobre um medicamento, através dos elementos textuais da embalagem, utilizando visão computacional.
+Com este propósito, foi construído, em Python, um sistema que recebe um arquivo de imagem e realiza a leitura do texto, utilizando diferentes codificações de cores para esta imagem, método que se mostrou eficaz para a identificação dos termos na imagem.
+Se forem encontrados termos, o sistema os classifica e busca no Bulário Eletrônico da Anvisa e, em caso de resposta válida, carrega o arquivo da bula.
+Para testar este sistema, foi construído um banco de imagens com fotos de medicamentos, com cerca de \num{1200} imagens.
+Ao longo do desenvolvimento, foram notados problemas de acesso \textit{online} ao portal do Bulário Eletrônico, que fica inacessível em certos horários do dia.
+Também foram notados problemas relacionados à orientação do texto nas imagens, onde se fez necessário ajustar algumas imagens para a correta leitura.
+A acurácia do sistema para leitura total ou parcial dos termos de interesse foi de pouco mais de \SI{80}{\percent} do banco de imagens, e destes termos, obteve sucesso total ou parcial ao encontrar o arquivo em mais de \SI{85}{\percent} dos casos.
+Estes resultados se mostraram melhores que os cerca \SI{26}{\percent} de leitura parcial ou correta realizadas pelo sistema semelhante que não utiliza de diferentes codificações de cores, que mostra o ganho envolvido na performance através deste método.
+
+\paragraph*{Palavras-chave:} Anvisa; Bulário Eletrônico; Tecnologia Assistiva; Processamento Digital de Imagens; Visão Computacional; Reconhecimento Ótico de Caracteres; Python.

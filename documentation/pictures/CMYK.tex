@@ -1,0 +1,73 @@
+\begin{tikzpicture}[radius=1.5cm]
+
+    \coordinate (O) at (0,0);
+    
+    % \draw [help lines, dashed] (-3,-3) grid (3,3); % desenha grid
+    % \draw [red] (O) node[draw,cross out] {}; % marca pont(0,0) 
+    
+    % \path[fill=Black] (-2.5,-2.5) rectangle (2.5,2.5);
+    \path[draw=cmyk_K, dashed, fill=cmyk_W] circle[radius=3cm];
+    % \clip (-6.8,-4) rectangle (6.8,4);
+
+  % \draw (0,0)  arc[start angle=180, end angle=90]
+  %     (2,.5) arc[start angle=90,  delta angle=-90];
+  % \draw (4,0) -- +(30:1cm)
+  %             arc [start angle=30,  delta angle=30] -- cycle;
+  % \draw (8,0) arc [start angle=0,   end angle=270,
+  %                  x radius=1cm, y radius=5mm] -- cycle;
+
+    % \path[draw, fill=green] (150:1) arc[start angle=180, end angle=90];
+    
+    \coordinate (cG) at (90 :0.866);
+    \coordinate (cR) at (210:0.866);
+    \coordinate (cB) at (330:0.866);
+
+    % \path[draw=green, thick] (cG) circle;
+    % \path[draw=red,   thick] (cR) circle;
+    % \path[draw=blue,  thick] (cB) circle;
+
+    \path[draw=cmyk_C, fill=cmyk_C]
+        (cR) arc (240:180:1.5)
+        arc (120:300:1.5)
+        arc (240:180:1.5)
+    ;
+
+    \path[draw=cmyk_Y, fill=cmyk_Y]
+        (cB) arc (0:-60:1.5)
+        arc (-120:60:1.5)
+        arc (0:-60:1.5)
+    ;
+
+    \path[draw=cmyk_M, fill=cmyk_M]
+        (cG) arc (120:60:1.5)
+        arc (0:180:1.5)
+        arc (120:60:1.5)
+    ;
+
+    \path[draw=cmyk_R, fill=cmyk_R]
+        (cG) arc (120:60:1.5)
+        arc (0:-60:1.5)
+        arc (0:60:1.5)
+    ;
+    
+    \path[draw=cmyk_G, fill=cmyk_G]
+        (cB) arc (0:-60:1.5)
+        arc (240:180:1.5)
+        arc (240:300:1.5)
+    ;
+    
+    \path[draw=cmyk_B, fill=cmyk_B]
+        (cR) arc (240:180:1.5)
+        arc (120:60:1.5)
+        arc (120:180:1.5)
+    ;
+
+    \path[draw=cmyk_K, fill=cmyk_K]
+        (cB) arc (0:60:1.5)
+        arc (120:180:1.5)
+        arc (240:300:1.5)
+    ;
+    
+
+    
+\end{tikzpicture}

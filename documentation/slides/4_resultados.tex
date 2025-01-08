@@ -1,0 +1,175 @@
+\section{Resultados}
+
+\subsection{Banco de fotos}
+\begin{frame}{Construção do banco de fotos}
+	\begin{table}
+		\centering
+		\caption*{Informações sobre o banco de fotos criado, contando quantidade de imagens, se estão presente ou auxentes no Bulário Eletrônico da Anvisa e resolução.}
+		\pgfplotstabletypesetfile{../data/banco.dat}
+		\caption*{Fonte: Autor.}
+	\end{table}
+	\begin{itemize}\footnotesize
+		\item Baixa resolução, abaixo de \SI{0.92}{\mega\pixel} (HD);
+		\item Média resolução, entre \SI{0.92}{\mega\pixel} (HD) e \SI{3.69}{\mega\pixel} (QHD);
+		\item Alta resolução, acima de \SI{3.69}{\mega\pixel} (QHD).
+	\end{itemize}
+\end{frame}
+
+
+\subsection{Performance}
+\begin{frame}{Acurácia para leitura}
+	\begin{table}
+		\centering
+		\caption*{Acurácia geral do sistema, destaque para casos lidos parcial ou corretamente.}
+		\resizebox{\textwidth}{!}{%
+		\pgfplotstabletypesetfile{../data/geral.dat}
+		}
+		\caption*{Fonte: Autor.}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\centering
+		\caption*{Gráfico de acurácia geral do sistema, com \num{1216} itens.}
+		\input{../pictures/acc_geral.tex}
+		\caption*{Fonte: Autor.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Acurácia para localização}
+	\begin{table}
+		\centering
+		\caption*{Acurácia do sistema somente para casos lidos corretamente, destaque para casas localizados corretamente ou semelhantes.}
+		\resizebox{\textwidth}{!}{%
+		\pgfplotstabletypesetfile{../data/lido.dat}
+		}
+		% \medskip
+		\caption*{Fonte: Autor.}
+	\end{table}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\caption*{Gráfico de acurácia do sistema somente para casos lidos corretamente, com \num{975} itens.}
+		\centering
+		\input{../pictures/acc_lido.tex}
+		\caption*{Fonte: Autor.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Sem versões alternativas}
+	\begin{table}
+		\centering
+		\caption*{Acurácia geral do sistema sem versões alternativas de imagem e acurácia somente para casos lidos corretamente.}
+		\resizebox{\textwidth}{!}{%
+		\pgfplotstabletypesetfile{../data/geral_raw.dat}
+		}
+		\\\vspace{\floatsep}
+		\resizebox{\textwidth}{!}{%
+		\pgfplotstabletypesetfile{../data/lido_raw.dat}
+		}
+		% \medskip
+		\caption*{Fonte: Autor.}
+	\end{table}
+\end{frame}
+
+\subsection{Problemas}
+\begin{frame}{Problemas encontrados}
+	\begin{itemize}
+		\item Falhas de acesso;
+		\item Orientação de texto;
+		\item Reflexos na imagem;
+		\item Obstruções na embalagem.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}{Falhas de acesso}
+	\begin{figure}
+	    \centering
+	    \caption*{Sistema tentando acessar o Bulário Eletrônico, fora do horário comercial.}
+	    \includegraphics[height=0.7\textheight]{../pictures/Anvisa_domingo.png}
+	    \caption*{Fonte: Autor, captura realizada em 2024-03-13.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+	    \centering
+	    \caption*{Bulário Eletrônico com erro 404, fora do horário comercial.}
+	    \includegraphics[height=0.7\textheight]{../pictures/Anvisa_error_404.png}
+	    \caption*{Fonte: Autor, captura realizada em 2024-03-13.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+	    \centering
+	    \caption*{Erro no servidor do Bulário Eletrônico, fora do horário comercial.}
+	    \includegraphics[height=0.7\textheight]{../pictures/Anvisa_error_timeout.png}
+	    \caption*{Fonte: Autor, captura realizada em 2024-03-13.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+	    \centering
+	    \caption*{Erro interno no servidor do Bulário Eletrônico, dentro do horário comercial.}
+	    \includegraphics[keepaspectratio, width=0.95\textwidth, height=0.7\textheight]{../pictures/2024-12-17 13.55.09 consultas.anvisa.gov.br 097b2055395f.png}
+	    \caption*{Fonte: Autor, captura realizada em 2024-12-17.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}{Orientação do texto}
+	\centering
+	\captionof*{figure}{Fotos de medicamento com diferentes orientações de texto.}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../pictures/IMG_20240229_162005.jpg}
+			\captionof*{figure}{Diagonal à horizontal.}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=0.9\textwidth, angle=-90]{../pictures/IMG_20240307_185809.jpg}
+			\captionof*{figure}{Paralela à horizontal.}
+		\end{column}
+	\end{columns}
+	\captionof*{figure}{Fonte: Autor.}
+\end{frame}
+
+\begin{frame}{Reflexos na imagem}
+	\centering
+	\captionof*{figure}{Fotos de medicamento com e sem reflexos sobre texto de interesse.}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[keepaspectratio, width=0.9\textwidth, angle=-90]{../pictures/IMG_20220908_191849.jpg}
+			\captionof*{figure}{Com reflexo.}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[keepaspectratio, width=0.9\textwidth, angle=90]{../pictures/IMG_20240301_105852.jpg}
+			\captionof*{figure}{Sem reflexo.}
+		\end{column}
+	\end{columns}
+	\captionof*{figure}{Fonte: Autor.}
+\end{frame}
+
+\begin{frame}{Obstruções na embalagem}
+	\centering
+	\captionof*{figure}{Fotos de medicamento com e sem rasuras na região do texto..}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../pictures/IMG_20240725_110209.jpg}
+			\captionof*{figure}{Texto partido.}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{../pictures/IMG_20240725_110238.jpg}
+			\captionof*{figure}{Texto inteiro.}
+		\end{column}
+	\end{columns}
+	\captionof*{figure}{Fonte: Autor.}
+\end{frame}

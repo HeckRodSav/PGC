@@ -1,0 +1,33 @@
+% https://www.youtube.com/watch?v=e968B1PwIbs&list=PLkRY1UknxTS0exb3ccUBJS1_e0TlSozFW&index=2
+
+\begin{tikzpicture}[node distance=1.5cm]
+    \node (s) [startstop] {Início};
+    \node (a1) [below of=s, io] {Carregar imagem};
+    \node (a2) [below of=a1, process] {Gerar versão};
+    \node (a3) [below of=a2, process] {Ler texto};
+    \node (a4) [below of=a3, loop] {Há outra versão?};
+    \node (a5) [right of=a1, process, node distance=5.5cm] {Organizar dados};
+    \node (a6) [below of=a5, process] {Buscar no bulário};
+    \node (a7) [below of=a6, process] {Carregar arquivo};
+    \node (f)  [below of=a7, startstop] {Fim};
+
+    \node [anchor=south west, font = {\scriptsize\bfseries}, Red] at (a4.east) {N};
+    \node [anchor=south east, font = {\scriptsize\bfseries}, Green] at (a4.west) {S};
+
+    % \node [fit=(a1)] (fita1) {}; \draw [niceBrace] ([yshift=2.5pt]fita1.north east) -- ([yshift=-2.5pt]fita1.south east);
+    % \node [fit=(a2)] (fita2) {}; \draw [niceBrace] ([yshift=2.5pt]fita2.north east) -- ([yshift=-2.5pt]fita2.south east);
+    % \node [fit=(a3)] (fita3) {}; \draw [niceBrace] ([yshift=2.5pt]fita3.north east) -- ([yshift=-2.5pt]fita3.south east);
+    % \node [fit=(a5)] (fita5) {}; \draw [niceBrace] ([yshift=2.5pt]fita5.north east) -- ([yshift=-2.5pt]fita5.south east);
+    % \node [fit=(a6)] (fita6) {}; \draw [niceBrace] ([yshift=2.5pt]fita6.north east) -- ([yshift=-2.5pt]fita6.south east);
+    % \node [fit=(a7)] (fita7) {}; \draw [niceBrace] ([yshift=2.5pt]fita7.north east) -- ([yshift=-2.5pt]fita7.south east);
+
+    \draw [arrow] (s) -- (a1);
+    \draw [arrow] (a1) -- (a2);
+    \draw [arrow] (a2) -- (a3);
+    \draw [arrow] (a3) -- (a4);
+    \draw [arrow] (a4) -| ($(a4)!0.5!(a5)$) |- (a5);
+    \draw [arrow] (a4) -- ([xshift=-.5cm]a4.west) |- (a2);
+    \draw [arrow] (a5) -- (a6);
+    \draw [arrow] (a6) -- (a7);
+    \draw [arrow] (a7) -- (f);
+\end{tikzpicture}

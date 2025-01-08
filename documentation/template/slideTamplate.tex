@@ -1,0 +1,608 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TEMPLATE PARA SLIDES
+% UFABC Rocket Design
+%
+% Lista de revisões: (data ISO - nome)
+%
+% 2021-04-01 - Heitor Rodrigues Savegnago
+% 2021-04-14 - Heitor Rodrigues Savegnago
+% 2021-04-16 - Heitor Rodrigues Savegnago
+% 2021-04-21 - Heitor Rodrigues Savegnago
+% 2021-04-28 - Heitor Rodrigues Savegnago
+% 2021-05-05 - Heitor Rodrigues Savegnago
+% 2021-05-12 - Heitor Rodrigues Savegnago
+% 2021-05-13 - Heitor Rodrigues Savegnago
+% 2023-09-22 - Heitor Rodrigues Savegnago
+% 2024-12-12 - Heitor Rodrigues Savegnago
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Formatação geral do documento
+
+    \usepackage[
+        orientation=landscape,
+        size=custom,
+        width=16,
+        height=12,
+        scale=0.5,
+        debug
+    ]{beamerposter}
+
+    % Fonte
+        %\renewcommand{\rmdefault}{phv} % Arial
+        \usepackage[lighttt]{lmodern} % Fonte Latin Modern
+            \renewcommand{\familydefault}{\sfdefault} % Estilo global Sans Serif
+
+        % Subistituição de fonte para casos de erro
+        \DeclareFontFamilySubstitution{TS1}{aer}{lmr}
+        \DeclareFontFamilySubstitution{TS1}{aett}{lmtt}
+        \DeclareFontFamilySubstitution{TS1}{aess}{lmss}
+
+    % Correções de espaçamentos
+        \usepackage{indentfirst} % Parágrafos indentados
+
+    % Opções para tópicos de enumerate
+
+        % \usepackage[shortlabels]{enumitem} % Selecionar formato em itemize
+        % Incompatível com opções de only
+
+	        % \setlength{\itemsep}{1em}
+            \let\tempone\itemize
+            \let\temptwo\enditemize
+            \renewenvironment{itemize}{\tempone\addtolength{\itemsep}{0.5\baselineskip}}{\temptwo}
+
+            \let\tempthree\enumerate
+            \let\tempfour\endenumerate
+            \renewenvironment{enumerate}{\tempthree\addtolength{\itemsep}{0.5\baselineskip}}{\tempfour}
+
+    % Texto geral em distribuição justificada
+        \usepackage{ragged2e}
+            \apptocmd{\frame}{}{\justifying}{}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Codificação de carecteres de entrada
+
+    \usepackage{ae} % "Almost European"
+    \usepackage[T1]{fontenc} % Caracteres especiais
+    \usepackage[utf8]{inputenc} % Caracteres especiais
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configuração de linguagem padrão do documento
+
+    \usepackage[english, main=brazil]{babel} % Detalhes automáticos em Português
+
+        \AtBeginDocument{\renewcommand{\contentsname}{\centerline{Sumário}}}
+        \AtBeginDocument{\renewcommand{\bibname}{Referências Bibliográficas}}
+    % 	\AtBeginDocument{\renewcommand{\figurename}{Figura}}
+    % 	\AtBeginDocument{\renewcommand{\tablename}{Tabela}}
+
+    \usepackage{textcomp} % Suporte de caracteres especiais
+
+    \usepackage{csquotes} % Opções de citação
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Configurações de core
+
+
+    \usepackage{transparent} % Opções de transparência
+
+    % \usepackage{xcolor} % Define cores
+    % O pacote xcolor já é carregado pelo beamer
+
+        \definecolor{0DF}{HTML}{00DDFF}%
+        \definecolor{0FD}{HTML}{00FFDD}%
+        \definecolor{DF0}{HTML}{DDFF00}%
+        \definecolor{FD0}{HTML}{FFDD00}%
+        \definecolor{F0D}{HTML}{FF00DD}%
+        \definecolor{D0F}{HTML}{DD00FF}%
+
+        \definecolor{0BD}{HTML}{00BBDD}%
+        \definecolor{0DB}{HTML}{00DDBB}%
+        \definecolor{BD0}{HTML}{BBDD00}%
+        \definecolor{DB0}{HTML}{DDBB00}%
+        \definecolor{D0B}{HTML}{DD00BB}%
+        \definecolor{B0D}{HTML}{BB00DD}%
+
+        \definecolor{09B}{HTML}{0099BB}%
+        \definecolor{0B9}{HTML}{00BB99}%
+        \definecolor{9B0}{HTML}{99BB00}%
+        \definecolor{B90}{HTML}{BB9900}%
+        \definecolor{B09}{HTML}{BB0099}%
+        \definecolor{90B}{HTML}{9900BB}%
+
+        \definecolor{079}{HTML}{007799}%
+        \definecolor{097}{HTML}{009977}%
+        \definecolor{790}{HTML}{779900}%
+        \definecolor{970}{HTML}{997700}%
+        \definecolor{907}{HTML}{990077}%
+        \definecolor{709}{HTML}{770099}%
+
+        \definecolor{057}{HTML}{005577}%
+        \definecolor{075}{HTML}{007755}%
+        \definecolor{570}{HTML}{557700}%
+        \definecolor{750}{HTML}{775500}%
+        \definecolor{705}{HTML}{770055}%
+        \definecolor{507}{HTML}{550077}%
+
+        \definecolor{035}{HTML}{003355}%
+        \definecolor{053}{HTML}{005533}%
+        \definecolor{350}{HTML}{335500}%
+        \definecolor{530}{HTML}{553300}%
+        \definecolor{503}{HTML}{550033}%
+        \definecolor{305}{HTML}{330055}%
+
+        \definecolor{013}{HTML}{001133}%
+        \definecolor{031}{HTML}{003311}%
+        \definecolor{130}{HTML}{113300}%
+        \definecolor{310}{HTML}{331100}%
+        \definecolor{301}{HTML}{330011}%
+        \definecolor{103}{HTML}{110033}%
+
+        \definecolor{rgb_R}{rgb}{1,0,0}%
+        \definecolor{rgb_G}{rgb}{0,1,0}%
+        \definecolor{rgb_B}{rgb}{0,0,1}%
+        \definecolor{rgb_M}{rgb}{1,0,1}%
+        \definecolor{rgb_Y}{rgb}{1,1,0}%
+        \definecolor{rgb_C}{rgb}{0,1,1}%
+        \definecolor{rgb_W}{rgb}{1,1,1}%
+        \definecolor{rgb_K}{rgb}{0,0,0}%
+
+        \definecolor{cmyk_C}{cmyk}{1,0,0,0}%
+        \definecolor{cmyk_M}{cmyk}{0,1,0,0}%
+        \definecolor{cmyk_Y}{cmyk}{0,0,1,0}%
+        \definecolor{cmyk_G}{cmyk}{1,0,1,0}%
+        \definecolor{cmyk_B}{cmyk}{1,1,0,0}%
+        \definecolor{cmyk_R}{cmyk}{0,1,1,0}%
+        \definecolor{cmyk_K}{cmyk}{1,1,1,1}%
+        \definecolor{cmyk_W}{cmyk}{0,0,0,0}%
+
+        \definecolor{strs}			{rgb}	{0.9,	0.2,	0	}%
+        \definecolor{coments}		{rgb}	{0,		0.5,	0	}%
+        \definecolor{backcode}		{rgb}	{0.3,	0,		0.2	}%
+
+        \definecolor{slideBlue}{rgb}{0,0,0.6}%
+        \definecolor{slideCyan}{rgb}{0,.3,.6}%
+        \definecolor{slideTurquoise}{rgb}{0,.6,.3}%
+        \definecolor{slideGreen}{rgb}{.3,.6,0}%
+        \definecolor{slideYellow}{rgb}{.7,.6,0}%
+        \definecolor{slideOrange}{rgb}{0.8,.3,0}%
+        \definecolor{slideRed}{rgb}{.7,0,0}%
+        \definecolor{slidePink}{rgb}{.8,0,.4}%
+        \definecolor{slidePurple}{rgb}{.6,0,.8}%
+
+        \definecolor{UFABCRDblue}{RGB}{8, 18, 77} % Cor do logo da rocket
+        % \definecolor{UFABCRDblue}{cmyk}{0.90, 0.77, 0, 0.70} % Cor do logo da rocket
+
+        \newcommand{\MexerDepois}[1]{{\huge\color{F0D}#1}}
+
+        \newcommand{\showcolors}%Mostra tabela de cores
+        {{\ttfamily
+        		{\color{0DF}$\overset{\text{\tiny 0DF}}{\blacksquare}$}
+        		{\color{0BD}$\overset{\text{\tiny 0BD}}{\blacksquare}$}
+        		{\color{09B}$\overset{\text{\tiny 09B}}{\blacksquare}$}
+        		{\color{079}$\overset{\text{\tiny 079}}{\blacksquare}$}
+        		{\color{057}$\overset{\text{\tiny 057}}{\blacksquare}$}
+        		{\color{035}$\overset{\text{\tiny 035}}{\blacksquare}$}
+        		{\color{013}$\overset{\text{\tiny 013}}{\blacksquare}$}
+        		\\
+        		{\color{0FD}$\overset{\text{\tiny 0FD}}{\blacksquare}$}
+        		{\color{0DB}$\overset{\text{\tiny 0DB}}{\blacksquare}$}
+        		{\color{0B9}$\overset{\text{\tiny 0B9}}{\blacksquare}$}
+        		{\color{097}$\overset{\text{\tiny 097}}{\blacksquare}$}
+        		{\color{075}$\overset{\text{\tiny 075}}{\blacksquare}$}
+        		{\color{053}$\overset{\text{\tiny 053}}{\blacksquare}$}
+        		{\color{031}$\overset{\text{\tiny 031}}{\blacksquare}$}
+        		\\
+        		{\color{DF0}$\overset{\text{\tiny DF0}}{\blacksquare}$}
+        		{\color{BD0}$\overset{\text{\tiny BD0}}{\blacksquare}$}
+        		{\color{9B0}$\overset{\text{\tiny 9B0}}{\blacksquare}$}
+        		{\color{790}$\overset{\text{\tiny 790}}{\blacksquare}$}
+        		{\color{570}$\overset{\text{\tiny 570}}{\blacksquare}$}
+        		{\color{350}$\overset{\text{\tiny 350}}{\blacksquare}$}
+        		{\color{130}$\overset{\text{\tiny 130}}{\blacksquare}$}
+        		\\
+        		{\color{FD0}$\overset{\text{\tiny FD0}}{\blacksquare}$}
+        		{\color{DB0}$\overset{\text{\tiny DB0}}{\blacksquare}$}
+        		{\color{B90}$\overset{\text{\tiny B90}}{\blacksquare}$}
+        		{\color{970}$\overset{\text{\tiny 970}}{\blacksquare}$}
+        		{\color{750}$\overset{\text{\tiny 750}}{\blacksquare}$}
+        		{\color{530}$\overset{\text{\tiny 530}}{\blacksquare}$}
+        		{\color{310}$\overset{\text{\tiny 310}}{\blacksquare}$}
+        		\\
+        		{\color{F0D}$\overset{\text{\tiny F0D}}{\blacksquare}$}
+        		{\color{D0B}$\overset{\text{\tiny D0B}}{\blacksquare}$}
+        		{\color{B09}$\overset{\text{\tiny B09}}{\blacksquare}$}
+        		{\color{907}$\overset{\text{\tiny 907}}{\blacksquare}$}
+        		{\color{705}$\overset{\text{\tiny 705}}{\blacksquare}$}
+        		{\color{503}$\overset{\text{\tiny 503}}{\blacksquare}$}
+        		{\color{301}$\overset{\text{\tiny 301}}{\blacksquare}$}
+        		\\
+        		{\color{D0F}$\overset{\text{\tiny D0F}}{\blacksquare}$}
+        		{\color{B0D}$\overset{\text{\tiny B0D}}{\blacksquare}$}
+        		{\color{90B}$\overset{\text{\tiny 90B}}{\blacksquare}$}
+        		{\color{709}$\overset{\text{\tiny 709}}{\blacksquare}$}
+        		{\color{507}$\overset{\text{\tiny 507}}{\blacksquare}$}
+        		{\color{305}$\overset{\text{\tiny 305}}{\blacksquare}$}
+        		{\color{103}$\overset{\text{\tiny 103}}{\blacksquare}$}
+        }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Configurações do pacote listings para adição de código no documento
+
+    \usepackage{listings}%Configura layout para mostrar codigos a partir de arquivo
+        \AtBeginDocument{\renewcommand{\lstlistingname}{Código}}
+
+
+        \lstdefinelanguage{JavaScript}{
+            keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+            ndkeywords={class, export, boolean, throw, implements, import, this},
+            % ndkeywordstyle=\color{darkgray}\bfseries,
+            identifierstyle=\color{black},
+            sensitive=true,
+            comment=[l]{//},
+            morecomment=[s]{/*}{*/},
+            morestring=[b]',
+            morestring=[b]"
+        }
+
+        \lstset{% Configurando layout para mostrar códigos C++
+            language=[11]C++,
+            basicstyle=\ttfamily\scriptsize,
+            backgroundcolor=\color{backcode!5},
+            stringstyle=\color{strs},
+            commentstyle=\color{coments},
+            keywordstyle=[1]\itshape\color{079},
+            keywordstyle=[2]\color{907},
+            keywordstyle=[3]\color{097},
+            keywordstyle=[4]\bfseries\color{790},
+            keywordstyle=[5]\color{709},
+            keywordstyle=[6]\color{970},
+            morekeywords=[1]{byte},
+            morekeywords=[2]{},
+            morekeywords=[3]{uint8_t, size_t, type},
+            morekeywords=[4]{},
+            numbers=left,
+            numberstyle=\ttfamily\tiny,
+            escapeinside={§}{§},
+            tabsize=2,
+            extendedchars=true,
+            showspaces=false,
+            showstringspaces=false,
+            numberbychapter=false,
+            emptylines=1,
+            frame=L,
+            firstnumber=auto,
+            breaklines=true,
+            breakautoindent=true,
+            captionpos=t,
+            float=htbp,
+            xleftmargin=2em,
+            inputencoding=utf8,
+            %texcl=true,
+            upquote=true,
+            literate=%
+                {á}{{\'a}}1 {à}{{\`a}}1 {ä}{{\"a}}1 {â}{{\^a}}1 {ã}{{\~a}}1 {å}{{\r{a}}}1
+                {Á}{{\'A}}1 {À}{{\`A}}1 {Ä}{{\"A}}1 {Â}{{\^A}}1 {Ã}{{\~A}}1 {Å}{{\r{A}}}1
+                {é}{{\'e}}1 {è}{{\`e}}1 {ë}{{\"e}}1 {ê}{{\^e}}1 {ẽ}{{\~e}}1
+                {É}{{\'E}}1 {È}{{\`E}}1 {Ë}{{\"E}}1 {Ê}{{\^E}}1 {Ẽ}{{\~E}}1
+                {í}{{\'i}}1 {ì}{{\`i}}1 {ï}{{\"i}}1 {î}{{\^i}}1 {ĩ}{{\~i}}1
+                {Í}{{\'I}}1 {Ì}{{\`I}}1 {Ï}{{\"I}}1 {Î}{{\^I}}1 {Ĩ}{{\~I}}1
+                {ó}{{\'o}}1 {ò}{{\`o}}1 {ö}{{\"o}}1 {ô}{{\^o}}1 {õ}{{\~o}}1 {ő}{{\H{o}}}1
+                {Ó}{{\'O}}1 {Ò}{{\`O}}1 {Ö}{{\"O}}1 {Ô}{{\^O}}1 {Õ}{{\~O}}1 {Ő}{{\H{O}}}1
+                {ú}{{\'u}}1 {ù}{{\`u}}1 {ü}{{\"u}}1 {û}{{\^u}}1 {ũ}{{\~u}}1 {ű}{{\H{u}}}1
+                {Ú}{{\'U}}1 {Ù}{{\`U}}1 {Ü}{{\"U}}1 {Û}{{\^U}}1 {Ũ}{{\~U}}1 {Ű}{{\H{U}}}1
+                {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+                {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1
+                {ñ}{{\~n}}1 {Ñ}{{\~N}}1
+                {ø}{{\o}}1 {Ø}{{\O}}1
+                {⁰}{{\textsuperscript{0}}}1
+                {¹}{{\textsuperscript{1}}}1
+                {²}{{\textsuperscript{2}}}1
+                {³}{{\textsuperscript{3}}}1
+                {⁴}{{\textsuperscript{4}}}1
+                {⁵}{{\textsuperscript{5}}}1
+                {⁶}{{\textsuperscript{6}}}1
+                {⁷}{{\textsuperscript{7}}}1
+                {⁸}{{\textsuperscript{8}}}1
+                {⁹}{{\textsuperscript{9}}}1
+                {°}{{\textdegree}}1
+                {€}{{\euro}}1 {£}{{\pounds}}1
+                {«}{{\guillemotleft}}1 {»}{{\guillemotright}}1
+                {¿}{{?`}}1 {¡}{{!`}}1
+        }
+
+        \newcommand{\coda}[1]{{\color{057}\lstinline|#1|}}
+        \newcommand{\code}[1]{{\color{075}\lstinline|#1|}}
+        \newcommand{\codi}[1]{{\color{570}\lstinline|#1|}}
+        \newcommand{\codo}[1]{{\color{750}\lstinline|#1|}}
+        \newcommand{\codu}[1]{{\color{705}\lstinline|#1|}}
+        \newcommand{\codw}[1]{{\color{507}\lstinline|#1|}}
+        \newcommand{\codGuide}{
+            \begin{center}
+                \large{\coda{A}\\\code{E}\\\codi{I}\\\codo{O}\\\codu{U}\\\codw{W}
+
+                \showcolors}
+            \end{center}
+        }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Adição de caracteres
+
+    \usepackage[euler]{textgreek} % Caracteres gregos
+
+    \usepackage{pmboxdraw} % Caracteres unicode
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pacotes de opções matemáticas
+
+    \usepackage{amsmath, amssymb, xfrac, cancel} % símbolos matemáticos
+
+    \usepackage{siunitx} % Comando \SI para unidades de medida
+        \sisetup{locale = FR} % Utilizar virgular para marcação decimal
+        \sisetup{separate-uncertainty = true}
+        \sisetup{exponent-product=\ensuremath{\cdot}}
+        \sisetup{separate-uncertainty=true}
+        \sisetup{multi-part-units=single}
+        \sisetup{group-separator = {}}
+        \sisetup{detect-all}
+
+        \DeclareSIUnit{\nothing}{{\relax}}
+        \DeclareSIUnit{\var}{VAR}
+        \DeclareSIUnit{\va}{VA}
+        \DeclareSIUnit{\dBm}{dBm}
+        \DeclareSIUnit{\pixel}{px} % Pixel
+
+    \usepackage{gensymb} % Símbolos de unidades de medida
+
+    \usepackage{mathtools}
+
+        \DeclareFontFamily{U}{mathc}{}
+        \DeclareFontShape{U}{mathc}{m}{it}%
+        {<->s*[1.03] mathc10}{}
+        \DeclareMathAlphabet{\mathcal}{U}{mathc}{m}{it}
+
+        \DeclareMathOperator{\sHom}{\mathcal{H\mkern-3mu om}}
+        \DeclareMathOperator{\sExt}{\mathcal{E\mkern-3mu xt}}
+        \DeclareMathOperator{\sEnd}{\mathcal{E\mkern-3mu nd}}
+
+    \usepackage{steinmetz} % Números complexos
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pacotes de opções químicas
+
+    \usepackage{chemformula}
+    \usepackage[version=3]{mhchem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Formatação de tabelas
+
+    \usepackage{tabularx} % Tabelas do tipo tabularx
+    \usepackage{booktabs} % Formatação de tabelas como em livro
+    \usepackage{makecell} % formatação avançada para tabelas
+    \usepackage{multicol} % Texto em colunas na folha
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Pacotes para trabalhar com figuras
+
+    \usepackage{graphicx} % Adição de imagens
+
+    \usepackage{svg} % Adição de imagens no formato SVG
+
+    \usepackage[outdir=./]{epstopdf} % Figuras em EPS convertidas em PDF
+
+    \usepackage{pdfpages} % Adição de PDFs como páginas
+
+    \usepackage[angle=0, text={}]{draftwatermark} % Adição de marca d'água
+    % \usepackage[printwatermark]{xwatermark}
+
+    \usepackage{tikz} % Desenhos
+        \usetikzlibrary{through}
+        \usetikzlibrary{shapes}
+        \usetikzlibrary{shapes.geometric}
+        \usetikzlibrary{trees}
+        \usetikzlibrary{fit}
+        \usetikzlibrary{patterns}
+        \usetikzlibrary{calc}
+        \usetikzlibrary{arrows}
+        \usetikzlibrary{decorations}
+        \usetikzlibrary{decorations.pathmorphing}
+        \usetikzlibrary{positioning}
+
+    \usepackage{pgfplots} % Desenho de gráficos
+        \pgfdeclarelayer{background}    % declare background layer
+        \pgfdeclarelayer{foreground}    % declare foreground layer
+        \pgfsetlayers{background,main,foreground}  % set the order of the layers (main is the standard layer)
+        \pgfplotsset{compat=1.14}
+        \usepgfplotslibrary{fillbetween}
+
+    \usepackage{pgf-pie} % Gráficos pizza
+
+    \usepackage[RPvoltages]{circuitikz} % Desenhos de circuitos
+        \ctikzset{bipoles/thickness=1}
+
+    \usepackage{pgfplotstable}
+
+        \pgfplotstableset{% global config, for example in the preamble
+            assign column name/.style={
+                /pgfplots/table/column name={\textbf{#1}} % Primeira linha em negrito
+            },
+            every first column/.style={
+                column type/.add={l}{} % Primeira coluna alinhada a esquerda
+            },
+            string type, % A entrada é textual
+            col sep=tab, % O arquivo é separado por tabs
+            every head row/.style={before row=\toprule,after row=\midrule}, % Definições de linhas horizintais do cabeçalho
+            every last row/.style={after row=\bottomrule}, % Definições de linhas horizontais do final
+        }
+
+    \usepackage{chemfig} % Desenho de moléculas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Utilitários adicionais para lidar com figuras e tabelas
+
+    % \usepackage{float} % posicionamento espacial
+
+    \usepackage{caption} % Comando \caption*
+
+    \usepackage{subcaption} % Opções de subfiguras
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Auxiliares gerais
+
+\usepackage{lipsum} % Lorem ipsum
+% \usepackage{rotating}
+\usepackage{ifdraft} % Opções adicionais para o modo draft
+
+\usepackage{csvsimple} % Carregar arquivos para o doc
+
+    \newcommand{\expandItemsListDat}[1]{ % Expandir items de arquivo .dat
+        \csvloop{
+            file = {#1},
+            no head,
+            before line = \item,
+            % after line =;
+        }}
+
+    \newcommand{\expandItemsListDatAspas}[1]{ % Expandir items de arquivo .dat
+        \csvloop{
+            file = {#1},
+            no head,
+            before line ={\item``},
+            after line ={''}
+        }}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Referência cruzada e links
+
+    % \usepackage[hidelinks]{hyperref} % Links no documento
+    % O pacote hyperref já é carregado pelo beamer
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% controle de citação e referências bibliográfica
+
+    \usepackage[
+        backend=biber,
+        style=ieee,
+        citestyle=numeric,
+        sorting=none,
+        block=space
+    ]{biblatex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Definições de macros especiais
+
+    % Exibir ou ocultar o logo
+        \newif\ifmostrarlogo
+        \mostrarlogofalse
+
+        \newcommand{\localLogo}{template/logo_ufabc.png}
+
+        \logo{\ifmostrarlogo\includegraphics[width=0.1\textwidth]{\localLogo}\vspace{0.826\textheight}\fi}
+
+    % Ocultar slides da navegação
+    \makeatletter
+        \let\beamer@writeslidentry@miniframeson=\beamer@writeslidentry
+        \def\beamer@writeslidentry@miniframesoff{%
+          \expandafter\beamer@ifempty\expandafter{\beamer@framestartpage}{}% does not happen normally
+          {%else
+            % removed \addtocontents commands
+            \clearpage\beamer@notesactions%
+          }
+        }
+        \newcommand*{\miniframeson}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframeson}
+        \newcommand*{\miniframesoff}{\let\beamer@writeslidentry=\beamer@writeslidentry@miniframesoff}
+    \makeatother
+
+        \newcommand{\etal}{\emph{et al}.}
+        \newcommand{\ie}{\emph{i}.\emph{e}.}
+        \newcommand{\eg}{\emph{e}.\emph{g}.}
+
+    \newcommand{\nomes}{}
+    \newcommand{\grupo}{}
+    \newcommand{\centro}{}
+    \newcommand{\centroSigla}{}
+    \newcommand{\disciplina}{}
+    \newcommand{\codigoDisciplina}{}
+    \newcommand{\titulo}{}
+    \newcommand{\professor}{}
+    \newcommand{\local}{}
+    \newcommand{\data}{\number\year}
+    \newcommand{\notaDeRosto}{}
+    \newcommand{\agradecimentos}{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Configurações de estilos de páginas
+
+    % Selecionando tema de apresentação
+        \usetheme{Dresden}
+
+    % Ajustando as cores do template
+        % \usecolortheme[named=UFABCRDblue]{structure} % Cor principal
+
+        % \setbeamercolor{palette primary}{bg=slideCyan,fg=white}
+        % \setbeamercolor{palette secondary}{bg=slideTurquoise,fg=white}
+        % \setbeamercolor{palette tertiary}{bg=slideGreen,fg=white}
+        % \setbeamercolor{palette quaternary}{bg=slideYellow,fg=white}
+        % \setbeamercolor{structure}{fg=UFABCRDblue} % itemize, enumerate, etc
+        % \setbeamercolor{section in toc}{fg=UFABCRDblue} % TOC sections
+        % \setbeamercolor{block title}{bg=UFABCRDblue,fg=white}
+        % \setbeamercolor{block body}{bg=UFABCRDblue!10,fg=black}
+        % \setbeamercolor{block title alerted}{bg=slideRed,fg=white}
+        % \setbeamercolor{block body alerted}{bg=slideRed!10,fg=black}
+        % \setbeamercolor{block title example}{bg=slideGreen,fg=white}
+        % \setbeamercolor{block body example}{bg=slideGreen!10,fg=black}
+
+    % Remover o menu de navegação semi transparente inferior
+        \setbeamertemplate{navigation symbols}{}
+
+    % Outras definições do template
+        % \institute{UFABC Rocket Design}
+        \titlegraphic{\includegraphics[height=0.2\textheight]{\localLogo}}
+
+
+        % Exibir número no cando tos slides
+        \newcommand{\frameofframes}{/}
+        \newcommand{\setframeofframes}[1]{\renewcommand{\frameofframes}{#1}}
+
+        \setframeofframes{de}
+        \makeatletter
+        \setbeamertemplate{footline}
+          {%
+            \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+            \end{beamercolorbox}
+            \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+              leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+              \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+              \hfill%
+              {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+              leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+              {\usebeamerfont{title in head/foot}\insertshorttitle}%
+              \hfill%
+              {\usebeamerfont{frame number}\usebeamercolor[fg]{frame number}\insertframenumber~\frameofframes~\inserttotalframenumber}
+            \end{beamercolorbox}%
+            \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+            \end{beamercolorbox}
+          }
+        \makeatother
+

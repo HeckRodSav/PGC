@@ -1,0 +1,53 @@
+\chapter{Conclusão}\label{cap:conclusao}
+
+Medicamentos de uso contínuo podem proporcionar bem estar a pacientes com problemas crônicos de saúde.
+Porém devem ser ministrados com cuidado, já que embalagens podem ser confundidas.
+Também é relevante destacar o risco relacionado ao hábito de se automedicar, comum no povo brasileiro, o que pode disfarçar sintômas de doenças graves, e retardar seu diagnóstico.
+
+Durante a revisão bibliográfica, foram listadas algumas propostas com escopo semelhante, focando em auxiliar pessoas com problemas de visão ou idade avançada, e também relacionadas a identifcação de medicamentos, que mostra a relevância do assunto.
+
+Como o Bulário Eletrônico da \ac{Anvisa} não possui uma \ac{API}, foi necessário realizar o acesso aos dados pelo portal.
+Apesar de ser um método funcional, não conta com ferramentas de confirmação de estado do servidor de dados, então se este estiver inoperante, não é retornado um aviso, apenas um erro de acesso.
+Associado a essa limitação, houve o problema de acesso ao portal da \ac{Anvisa} fora do horário comercial, que atrasou as análises em algumas situações ao longo do desenvolvimento do projeto.
+
+As análises iniciais, relacionadas à performance do motor \ac{OCR} utilizado, apontaram que o algoritmo não seria suficiente para encontrar o texto de interesse em toda imagem.
+A adição de versões diferentes da imgem, operando em outras codificações de cores, acrescentou maior amplitude ao algoritmo utilizado, porém deixou o tempo de processamento maior.
+
+Normalizar os termos encontrados facilitou a busca destes no Bulário Eletrônico, porém, em alguns casos, o registro do medicamente contém caracteres especiais, isto é, que fogem da codificação \ac{ASCII}.
+Para estes, foi necessário adicionar à lista de termos versões corrigidas das palavras.
+
+A ordenação dos termos encontrados pelo motor \ac{OCR} foi uma das principais dificuldades encontradas, já que várias embalagens apresentam os compostos do princípio ativo associado, e estes compostos podem nomear outros medicamentos.
+Utilizar das características geométricas do termo na imagem foi uma forma encotrada para contornar isso, mas não foi suficiente para resolver todos os casos.
+Nessa situação, mesmo que os termos apropriados tenham sido localizados, esses poderiam ser buscados depois de outros, que retornariam um medicamento diferente do correto.
+
+Buscar um termo localizado gera uma lista de resultados, em muitos casos vazia, quando o termo não está presente em qualquer nome de medicamento, em outros casos com valores relevantes, quando o termo realmente faz parte do nome de um medicamento.
+Porém houveram casos notáveis, onde a busca resulta em uma lista com centenas de medicamentos, quando o termo buscado é composto somente por um caractere, geralmente a lista é composta por todos os medicamentos que o nome começa com este caractere.
+Para contornar isso, os termos com um único caractere não são buscados, porém estes termos ainda são mantidos na lista, já que podem representar a principal diferença entre o nome de medicamentos, \eg\ diferenciar nomes como ``Vitamina C'' de ``Vitamina D''.
+
+Os resultados mostraram que, apesar dos problemas encontrados, o sistema desenvolvido realizou a identificação correta ou parcial do termo de interesse em mais de \SI{80}{\percent} do banco de fotos.
+Dos termos lidos correta ou parcialmente, conseguiu localizar mais de \SI{85}{\percent} no sistema do Bulário Eletrônico da \ac{Anvisa}.
+Apesar de identificados corretamente, algumas imagens do banco não foram localizadas, estas podem ser agrupadas em dois casos principais, o primeiro onde a foto se refere a algo que não está listado no Bulário Eletrônico da Anvisa, como medicamentos homeopáticos ou para animais, e o segundo para casos onde a ordem que os termos foram buscados resultou num resultado errôneo.
+
+Foi analisada também uma versão do sistema onde somente a imagem original é utilizada na busca de imagens, \ie\ sem as análises em diferentes sistemas de codificação de cores.
+Neste caso, pouco mais de \SI{25}{\percent} das imagens tiverem seus termos de interesse identificados correta ou parcialmente.
+Destes termos, mais de \SI{95}{\percent} foram localizados no Bulário Eletrônico da \ac{Anvisa}.
+É importante notar que, apesar de ser uma porcentagem relativamente alta, estes termos encontrados são referentes a menos de um quarto do banco de imagens.
+Essa análise alternativa mostra que o método adotado foi relevante na localização dos termos de interesse e, consequentemente, na correta localização no Bulário Eletrônico da \ac{Anvisa}.
+
+A limitação de serviço no portal do Bulário Eletrônico da \ac{Anvisa} refletiu em uma limitação equivalente no sistema aqui desenvolvido.
+Como o portal fica indisponível fora do horário comercial, não é possível realizar buscas neste período, mesmo que o sistema tenha encontrado e classificado os termos corretamente.
+
+Outros problemas encontrados foram relacionados à forma que os termos de interesse estavam dispostos nas imagens.
+Em alguns casos, a angulação do texto impediu o correto funcionamento do motor \ac{OCR}, em outros, reflexos e obstruções impediram a identificação.
+Algumas dessas obstruções consistem em fissuras associadas a própria abertura da embalagem do medicamento, como cartelas de comprimidos.
+
+Em conclusão, o trabalho aqui proposto se mostrou eficaz na identificação de medicamentos e busca dos arquivos de bulas eletrônicas registrados na \ac{Anvisa}, obtendo sucesso ao localizar mais de \SI{70}{\percent} dos casos testados.
+A abordagem, utilizando diferentes codificações de cores, se mostrou valorosa para os resultados, apesar de aumentar o tempo de processamento das imagens.
+
+Em trabalhos futuros, há a possibilidade de melhorar o método para busca dos termos encontrados no Bulário Eletrônico da \ac{Anvisa}, tornando-a mais criteriosa em relação aos resultados, diminuindo a incidência de falsos positivos.
+É possível realizar uma pré indexação \textit{offline} dos medicamentos presentes no Bulário Eletrônico, viabilizando grande melhoria nos métodos de busca, que a tornaria mais rápida e eficiente, além de garantir o funcionamento em qualquer horário.
+Além disso, o desenvolvimento de uma interface de usuário mais amigável, com uma versão \textit{mobile}, poderia tornar o sistema mais acessível, além de poder contar com avisos sobre o risco da automedicação.
+Também é viável buscar métodos para lidar melhor com a angulação do texto nas imagens, simplificando o pré processamento do banco de fotos.
+
+
+% \MexerDepois{Completar isso depois}

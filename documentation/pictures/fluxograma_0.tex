@@ -1,0 +1,86 @@
+% https://www.youtube.com/watch?v=e968B1PwIbs&list=PLkRY1UknxTS0exb3ccUBJS1_e0TlSozFW&index=2
+
+\begin{tikzpicture}[node distance=1.5cm]
+    \node (s) [startstop] {Início};
+    \node (a1) [below of=s, io] {Carregar imagem};
+    \node (a2) [below of=a1, process] {Gerar versão};
+    \node (a3) [below of=a2, process] {Ler texto};
+    \node (a4) [below of=a3, loop] {Há outra versão?};
+    \node (a5) [below of=a4, process] {Organizar dados};
+    \node (a6) [below of=a5, process] {Buscar no bulário};
+    \node (a7) [below of=a6, process] {Carregar arquivo};
+    \node (f)  [below of=a7, startstop] {Fim};
+
+    \node [left of=a1, auxBlockPhantom] {\phantom{\autoref{ssec:carregar}}};
+
+    \node [right of=a1, auxBlock] {\autoref{ssec:carregar}};
+    \node [right of=a2, auxBlock] {\autoref{ssec:versoes}};
+    \node [right of=a3, auxBlock] {\autoref{ssec:ler}};
+    \node [right of=a5, auxBlock] {\autoref{ssec:organizar}};
+    \node [right of=a6, auxBlock] {\autoref{ssec:buscar}};
+    \node [right of=a7, auxBlock] {\autoref{ssec:arquivo}};
+
+    \draw [niceBrace] ([yshift=0.6cm, xshift=2.25cm]a1.center) -- ([yshift=-0.6cm, xshift=2.25cm]a1.center);
+    \draw [niceBrace] ([yshift=0.6cm, xshift=2.25cm]a2.center) -- ([yshift=-0.6cm, xshift=2.25cm]a2.center);
+    \draw [niceBrace] ([yshift=0.6cm, xshift=2.25cm]a3.center) -- ([yshift=-0.6cm, xshift=2.25cm]a3.center);
+    \draw [niceBrace] ([yshift=0.6cm, xshift=2.25cm]a5.center) -- ([yshift=-0.6cm, xshift=2.25cm]a5.center);
+    \draw [niceBrace] ([yshift=0.6cm, xshift=2.25cm]a6.center) -- ([yshift=-0.6cm, xshift=2.25cm]a6.center);
+    \draw [niceBrace] ([yshift=0.6cm, xshift=2.25cm]a7.center) -- ([yshift=-0.6cm, xshift=2.25cm]a7.center);
+
+    \node [anchor=north west, font = {\scriptsize\bfseries}, Red] at (a4.south) {N};
+    \node [anchor=south east, font = {\scriptsize\bfseries}, Green] at (a4.west) {S};
+
+    % \node [fit=(a1)] (fita1) {}; \draw [niceBrace] ([yshift=2.5pt]fita1.north east) -- ([yshift=-2.5pt]fita1.south east);
+    % \node [fit=(a2)] (fita2) {}; \draw [niceBrace] ([yshift=2.5pt]fita2.north east) -- ([yshift=-2.5pt]fita2.south east);
+    % \node [fit=(a3)] (fita3) {}; \draw [niceBrace] ([yshift=2.5pt]fita3.north east) -- ([yshift=-2.5pt]fita3.south east);
+    % \node [fit=(a5)] (fita5) {}; \draw [niceBrace] ([yshift=2.5pt]fita5.north east) -- ([yshift=-2.5pt]fita5.south east);
+    % \node [fit=(a6)] (fita6) {}; \draw [niceBrace] ([yshift=2.5pt]fita6.north east) -- ([yshift=-2.5pt]fita6.south east);
+    % \node [fit=(a7)] (fita7) {}; \draw [niceBrace] ([yshift=2.5pt]fita7.north east) -- ([yshift=-2.5pt]fita7.south east);
+
+
+    \draw [arrow] (s) -- (a1);
+    \draw [arrow] (a1) -- (a2);
+    \draw [arrow] (a2) -- (a3);
+    \draw [arrow] (a3) -- (a4);
+    \draw [arrow] (a4) -- (a5);
+    \draw [arrow] (a4) -- ([xshift=-.5cm]a4.west) |- (a2);
+    \draw [arrow] (a5) -- (a6);
+    \draw [arrow] (a6) -- (a7);
+    \draw [arrow] (a7) -- (f);
+\end{tikzpicture}
+% \begin{tikzpicture}[node distance=1.5cm]
+%     \node (s) [startstop] {Início};
+%     \node (a1) [below of=s, io] {Carregar imagem};
+%     \node (a2) [below of=a1, loop] {Gerar versões};
+%     \node (a3) [right of=a1, node distance=5cm, process] {Ler texto};
+%     \node (a5) [below of=a3, process] {Organizar dados};
+%     \node (a6) [right of=a3, node distance=5cm, process] {Buscar no bulário};
+%     \node (a7) [below of=a6, process] {Carregar arquivo};
+%     \node (f)  [below of=a7, startstop] {Fim};
+
+%     \draw [arrow] (s) -- (a1);
+%     \draw [arrow] (a1) -- (a2);
+%     \draw [arrow] (a2) -| ($(a2)!0.5!(a3)$) |- (a3);
+%     \draw [arrow] (a3) -- (a5);
+%     \draw [arrow] (a5) -| ($(a5)!0.5!(a6)$) |- (a6);
+%     \draw [arrow] (a6) -- (a7);
+%     \draw [arrow] (a7) -- (f);
+% \end{tikzpicture}
+% \begin{tikzpicture}[node distance=1.5cm]
+%     \node (s) [startstop] {Início};
+%     \node (a1) [below of=s, io] {Carregar imagem};
+%     \node (a2) [right of=a1, node distance=5cm, loop] {Gerar versões};
+%     \node (a3) [right of=a2, node distance=5cm, process] {Ler texto};
+%     \node (a5) [below of=a1, node distance=2cm, process] {Organizar dados};
+%     \node (a6) [right of=a5, node distance=5cm, process] {Buscar no bulário};
+%     \node (a7) [right of=a6, node distance=5cm, process] {Carregar arquivo};
+%     \node (f)  [below of=a7, startstop] {Fim};
+
+%     \draw [arrow] (s) -- (a1);
+%     \draw [arrow] (a1) -- (a2);
+%     \draw [arrow] (a2) -- (a3);
+%     \draw [arrow] (a3) |- ($(a3)!0.5!(a5)$) -| (a5);
+%     \draw [arrow] (a5) -- (a6);
+%     \draw [arrow] (a6) -- (a7);
+%     \draw [arrow] (a7) -- (f);
+% \end{tikzpicture}

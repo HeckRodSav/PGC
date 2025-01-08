@@ -1,0 +1,119 @@
+\begin{tikzpicture}
+    % \pgfsetfillopacity{0.5}
+
+    \begin{axis} %configuração do eixo Y esquerdo e eixo X
+    [
+        % reverse legend, % inverte a ordem que os items aparecem na legenda
+    	legend style={
+			% at={($(current bounding box.north)$)},
+			at={($(current bounding box.north)+(1cm,0cm)$)},
+        	anchor=south,
+        	legend columns=3,
+        % 	transpose legend,
+        	draw=none,
+			/tikz/every even column/.append style={column sep=0.5cm}
+    	}, % onde exibir
+        % axis x line=center,
+        % axis y line=center,
+        height=.4\textwidth, % altura da região do gráfico
+        width=0.8\textwidth, % largura da região do gráfico
+        scale only axis, %
+        minor grid style={densely dotted}, % estilo da grade secundária
+        major grid style={densely dashed}, % estilo da grade principal
+        grid style={lightgray}, % cor das grades
+        % axis on top, % forçar grade para ficar por cima do gráfico
+        %
+        %
+        % axis y line*=left, % define gráfico para usar eixo esquerdo sem exibir direito
+        ylabel={Leitura}, % titulo eixo vertical
+        % y tick label style={
+        %     /pgf/number format/.cd,
+        %     fixed,
+        %     % fixed zerofill,
+        %     % precision=0, % quantidade de casas depois da virgula
+        %     /tikz/.cd
+        % },
+        % y filter/.expression={y==0 ? NaN : y},
+        % scaled y ticks = false,
+        % ymode=log,
+        % yticklabel={\pgfmathparse{\tick/10^3}\pgfmathprintnumber{\pgfmathresult}}, % fator multiplicativo para valores do eixo
+        symbolic y coords={ Correta, Parcial, Incorreta},
+        ytick=data,
+        % y tick label style={/pgf/number format/1000 sep=}, % Altera marcação de milhar
+        y tick label style={rotate=90},
+        % yticklabel style={rotate=90},
+        %ytick={0,100,200,300, 400, 500, 600, 700, 800}, % lista de valores a serem utilizados no eixo
+        % ymin=-5,  ymax=85,  % intervalo de valores no eixo y -> na dúvida, deixe comentado
+        %
+        % ymajorgrids=true, % exibir grade principal y
+        % yminorgrids=true, % exibir grade secundária y
+        % minor y tick num=3, % contagem de linhas na grade secundária y
+        % ybar,
+        %
+        %
+        xlabel={Casos analisados (\si{\percent})}, % título eixo horizontal
+        % xticklabel={\pgfmathparse{\tick*10^3}\pgfmathprintnumber{\pgfmathresult}}, % fator multiplicativo para valores do eixo
+        % xmode=log,
+        % log ticks with fixed point,
+        % x filter/.code=\pgfmathparse{#1 + 6.90775527898214},
+        x tick label style={
+            /pgf/number format/.cd,
+            fixed,
+            % fixed zerofill,
+            precision=0,
+            /tikz/.cd,
+            /pgf/number format/use comma
+        },
+		% symbolic x coords={Nao encontrado, Semelhante, Encontrado},
+		% xtick=data,
+		% x tick label style={rotate=30,anchor=east},
+        xmin=-5,
+        xmax=85, % intervalo de valores no eixo x -> na dúvida, deixe comentado
+        % scaled x ticks = true,
+        %
+        xmajorgrids=true, % exibir grade principal x
+        xminorgrids=true, % exibir grade secundária x
+        minor x tick num=3, % contagem de linhas na grade secundária x
+        %
+        %
+        %
+        enlarge y limits=0.25,
+        % enlargelimits=0.5,
+		xbar stacked,
+		bar width = 1.5cm
+    ]
+
+    % \addplot[mark=none,red]
+    % table[
+    %     x=time, % cabeçalho da coluna de dados X no arquivo
+    %     y=vin % cabeçalho da coluna de dados Y no arquivo
+    % ]
+    % {graficos/dados/C.2.2.dat};
+    % \addlegendentry{V\textsubscript{in}}
+
+	\addplot[mark=none, draw opacity=0, fill=cmyk_R]
+	table[
+		y=itens, % cabeçalho da coluna de dados X no arquivo
+		x={Não encontrado} % cabeçalho da coluna de dados Y no arquivo
+	]
+	{../data/acc_geral.dat};
+	\addlegendentry{Não encontrado}
+
+	\addplot[mark=none, draw opacity=0, fill=cmyk_G]
+	table[
+		y=itens, % cabeçalho da coluna de dados X no arquivo
+		x=Semelhante % cabeçalho da coluna de dados Y no arquivo
+	]
+	{../data/acc_geral.dat};
+	\addlegendentry{Semelhante}
+
+	\addplot[mark=none, draw opacity=0, fill=cmyk_B]
+    table[
+        y=itens, % cabeçalho da coluna de dados X no arquivo
+        x=Encontrado % cabeçalho da coluna de dados Y no arquivo
+    ]
+    {../data/acc_geral.dat};
+    \addlegendentry{Encontrado}
+
+    \end{axis}
+\end{tikzpicture}

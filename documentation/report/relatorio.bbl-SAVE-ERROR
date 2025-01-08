@@ -1,0 +1,710 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{medico24hs2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=e05b16cdf2709283b033214464d20cc2}{%
+           family={{Médico 24hs}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e05b16cdf2709283b033214464d20cc2}
+      \strng{fullhash}{e05b16cdf2709283b033214464d20cc2}
+      \strng{fullhashraw}{e05b16cdf2709283b033214464d20cc2}
+      \strng{bibnamehash}{e05b16cdf2709283b033214464d20cc2}
+      \strng{authorbibnamehash}{e05b16cdf2709283b033214464d20cc2}
+      \strng{authornamehash}{e05b16cdf2709283b033214464d20cc2}
+      \strng{authorfullhash}{e05b16cdf2709283b033214464d20cc2}
+      \strng{authorfullhashraw}{e05b16cdf2709283b033214464d20cc2}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{8}
+      \field{title}{As 10 principais doenças da terceira idade}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://medico24hs.com.br/blog/saude/as-10-principais-doencas-da-terceira-idade
+      \endverb
+      \verb{url}
+      \verb https://medico24hs.com.br/blog/saude/as-10-principais-doencas-da-terceira-idade
+      \endverb
+    \endentry
+    \entry{porto2023}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=087e641ec174a487ead9a594841f3e1d}{%
+           family={{Blog da Porto}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{087e641ec174a487ead9a594841f3e1d}
+      \strng{fullhash}{087e641ec174a487ead9a594841f3e1d}
+      \strng{fullhashraw}{087e641ec174a487ead9a594841f3e1d}
+      \strng{bibnamehash}{087e641ec174a487ead9a594841f3e1d}
+      \strng{authorbibnamehash}{087e641ec174a487ead9a594841f3e1d}
+      \strng{authornamehash}{087e641ec174a487ead9a594841f3e1d}
+      \strng{authorfullhash}{087e641ec174a487ead9a594841f3e1d}
+      \strng{authorfullhashraw}{087e641ec174a487ead9a594841f3e1d}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Medicamentos de uso contínuo: o que você precisa saber antes de iniciar}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://blog.portoseguro.com.br/medicamentos-de-uso-continuo-o-que-voce-precisa-saber-antes-de-iniciar
+      \endverb
+      \verb{url}
+      \verb https://blog.portoseguro.com.br/medicamentos-de-uso-continuo-o-que-voce-precisa-saber-antes-de-iniciar
+      \endverb
+    \endentry
+    \entry{ione2017}{online}{}{}
+      \name{author}{2}{}{%
+        {{hash=a4a8202f06030a209c23f5e35135b1ec}{%
+           family={Luques},
+           familyi={L\bibinitperiod},
+           given={Ione},
+           giveni={I\bibinitperiod}}}%
+        {{hash=9b510936605e204b985f2d41818c2d1b}{%
+           family={Zarur},
+           familyi={Z\bibinitperiod},
+           given={Camila},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {O Globo}%
+      }
+      \strng{namehash}{c38da2a57a5b53633424eb6bce7a31f6}
+      \strng{fullhash}{c38da2a57a5b53633424eb6bce7a31f6}
+      \strng{fullhashraw}{c38da2a57a5b53633424eb6bce7a31f6}
+      \strng{bibnamehash}{c38da2a57a5b53633424eb6bce7a31f6}
+      \strng{authorbibnamehash}{c38da2a57a5b53633424eb6bce7a31f6}
+      \strng{authornamehash}{c38da2a57a5b53633424eb6bce7a31f6}
+      \strng{authorfullhash}{c38da2a57a5b53633424eb6bce7a31f6}
+      \strng{authorfullhashraw}{c38da2a57a5b53633424eb6bce7a31f6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{11}
+      \field{title}{Parece, mas não é: o perigo de remédios com caixas similares}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://oglobo.globo.com/economia/defesa-do-consumidor/parece-mas-nao-o-perigo-de-remedios-com-caixas-similares-22059860
+      \endverb
+      \verb{url}
+      \verb https://oglobo.globo.com/economia/defesa-do-consumidor/parece-mas-nao-o-perigo-de-remedios-com-caixas-similares-22059860
+      \endverb
+    \endentry
+    \entry{crfsp2019}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=a054693b19b41373e65a978f219ba1ed}{%
+           family={{Departamento de Comunicação CRF-SP}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{a054693b19b41373e65a978f219ba1ed}
+      \strng{fullhash}{a054693b19b41373e65a978f219ba1ed}
+      \strng{fullhashraw}{a054693b19b41373e65a978f219ba1ed}
+      \strng{bibnamehash}{a054693b19b41373e65a978f219ba1ed}
+      \strng{authorbibnamehash}{a054693b19b41373e65a978f219ba1ed}
+      \strng{authornamehash}{a054693b19b41373e65a978f219ba1ed}
+      \strng{authorfullhash}{a054693b19b41373e65a978f219ba1ed}
+      \strng{authorfullhashraw}{a054693b19b41373e65a978f219ba1ed}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{4}
+      \field{title}{Pesquisa aponta que 77\% dos brasileiros têm o hábito de se automedicar}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.crfsp.org.br/noticias/10535-pesquisa-aponta-que-77-dos-brasileiros-têm-o-hábito-de-se-automedicar.html
+      \endverb
+      \verb{url}
+      \verb https://www.crfsp.org.br/noticias/10535-pesquisa-aponta-que-77-dos-brasileiros-t%C3%AAm-o-h%C3%A1bito-de-se-automedicar.html
+      \endverb
+    \endentry
+    \entry{g12019}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c0497521d35d66866e3af408094864c3}{%
+           family={{G1}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{c0497521d35d66866e3af408094864c3}
+      \strng{fullhash}{c0497521d35d66866e3af408094864c3}
+      \strng{fullhashraw}{c0497521d35d66866e3af408094864c3}
+      \strng{bibnamehash}{c0497521d35d66866e3af408094864c3}
+      \strng{authorbibnamehash}{c0497521d35d66866e3af408094864c3}
+      \strng{authornamehash}{c0497521d35d66866e3af408094864c3}
+      \strng{authorfullhash}{c0497521d35d66866e3af408094864c3}
+      \strng{authorfullhashraw}{c0497521d35d66866e3af408094864c3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{5}
+      \field{title}{Automedicação é um hábito comum a 77\% dos brasileiros}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://g1.globo.com/bemestar/noticia/2019/05/13/automedicacao-e-um-habito-comum-a-77percent-dos-brasileiros.ghtml
+      \endverb
+      \verb{url}
+      \verb https://g1.globo.com/bemestar/noticia/2019/05/13/automedicacao-e-um-habito-comum-a-77percent-dos-brasileiros.ghtml
+      \endverb
+    \endentry
+    \entry{CBO2013condicoes}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=752b5b223964217901f540db5ddfe713}{%
+           family={{Conselho Brasileiro De Oftalmologia}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{752b5b223964217901f540db5ddfe713}
+      \strng{fullhash}{752b5b223964217901f540db5ddfe713}
+      \strng{fullhashraw}{752b5b223964217901f540db5ddfe713}
+      \strng{bibnamehash}{752b5b223964217901f540db5ddfe713}
+      \strng{authorbibnamehash}{752b5b223964217901f540db5ddfe713}
+      \strng{authornamehash}{752b5b223964217901f540db5ddfe713}
+      \strng{authorfullhash}{752b5b223964217901f540db5ddfe713}
+      \strng{authorfullhashraw}{752b5b223964217901f540db5ddfe713}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{São Paulo}
+      \field{title}{As condições de saúde ocular no Brasil, 2023}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://static.poder360.com.br/2023/06/condicoes-saude-ocular-cbo-2023-oftalmologia.pdf
+      \endverb
+      \verb{url}
+      \verb https://static.poder360.com.br/2023/06/condicoes-saude-ocular-cbo-2023-oftalmologia.pdf
+      \endverb
+    \endentry
+    \entry{lenscope2021}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=b2dc48da02f72bb3c2aaf571a946bbf4}{%
+           family={Lenscope},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{b2dc48da02f72bb3c2aaf571a946bbf4}
+      \strng{fullhash}{b2dc48da02f72bb3c2aaf571a946bbf4}
+      \strng{fullhashraw}{b2dc48da02f72bb3c2aaf571a946bbf4}
+      \strng{bibnamehash}{b2dc48da02f72bb3c2aaf571a946bbf4}
+      \strng{authorbibnamehash}{b2dc48da02f72bb3c2aaf571a946bbf4}
+      \strng{authornamehash}{b2dc48da02f72bb3c2aaf571a946bbf4}
+      \strng{authorfullhash}{b2dc48da02f72bb3c2aaf571a946bbf4}
+      \strng{authorfullhashraw}{b2dc48da02f72bb3c2aaf571a946bbf4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{2}
+      \field{title}{Visão 20/20: indica visão perfeita? Saiba mais}
+      \field{year}{2021}
+      \verb{urlraw}
+      \verb https://lenscope.com.br/blog/visao-20-20-indica-visao-perfeita-saiba-mais
+      \endverb
+      \verb{url}
+      \verb https://lenscope.com.br/blog/visao-20-20-indica-visao-perfeita-saiba-mais
+      \endverb
+    \endentry
+    \entry{bersch2008introduccao}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=e8f522ac60f62009c9d128a1d3565841}{%
+           family={Bersch},
+           familyi={B\bibinitperiod},
+           given={Rita},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8f522ac60f62009c9d128a1d3565841}
+      \strng{fullhash}{e8f522ac60f62009c9d128a1d3565841}
+      \strng{fullhashraw}{e8f522ac60f62009c9d128a1d3565841}
+      \strng{bibnamehash}{e8f522ac60f62009c9d128a1d3565841}
+      \strng{authorbibnamehash}{e8f522ac60f62009c9d128a1d3565841}
+      \strng{authornamehash}{e8f522ac60f62009c9d128a1d3565841}
+      \strng{authorfullhash}{e8f522ac60f62009c9d128a1d3565841}
+      \strng{authorfullhashraw}{e8f522ac60f62009c9d128a1d3565841}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Porto Alegre: CEDI}
+      \field{title}{Introdução à tecnologia assistiva}
+      \field{volume}{21}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://www.assistiva.com.br/Introducao_Tecnologia_Assistiva.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.assistiva.com.br/Introducao_Tecnologia_Assistiva.pdf
+      \endverb
+    \endentry
+    \entry{sebold2020tecnologia}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d7c9b307cd358a28e9e48b05f595c18c}{%
+           family={Sebold},
+           familyi={S\bibinitperiod},
+           given={Waston},
+           giveni={W\bibinitperiod}}}%
+        {{hash=bad59824188af26202f415e3288a8770}{%
+           family={Pedrosa},
+           familyi={P\bibinitperiod},
+           given={Stella\bibnamedelimb Maria\bibnamedelimb Peixoto\bibnamedelimb de\bibnamedelima Azevedo},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod\bibinitdelim P\bibinitperiod\bibinitdelim d\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{3c26d6d99cc6eff1f2b49161fc2b6053}
+      \strng{fullhash}{3c26d6d99cc6eff1f2b49161fc2b6053}
+      \strng{fullhashraw}{3c26d6d99cc6eff1f2b49161fc2b6053}
+      \strng{bibnamehash}{3c26d6d99cc6eff1f2b49161fc2b6053}
+      \strng{authorbibnamehash}{3c26d6d99cc6eff1f2b49161fc2b6053}
+      \strng{authornamehash}{3c26d6d99cc6eff1f2b49161fc2b6053}
+      \strng{authorfullhash}{3c26d6d99cc6eff1f2b49161fc2b6053}
+      \strng{authorfullhashraw}{3c26d6d99cc6eff1f2b49161fc2b6053}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Revista Educação e Cultura Contemporânea}
+      \field{number}{51}
+      \field{title}{Tecnologia Assistiva: uma introdução}
+      \field{volume}{17}
+      \field{year}{2020}
+      \field{pages}{111\bibrangedash 134}
+      \range{pages}{24}
+      \verb{urlraw}
+      \verb http://periodicos.estacio.br/index.php/reeduc/article/viewArticle/9038
+      \endverb
+      \verb{url}
+      \verb http://periodicos.estacio.br/index.php/reeduc/article/viewArticle/9038
+      \endverb
+    \endentry
+    \entry{galvao2009tecnologia}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=f3cad1fa465b475ac8df065a58b9b9a0}{%
+           family={Galvão\bibnamedelima Filho},
+           familyi={G\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Teófilo\bibnamedelima Alves},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Redes Editora Porto Alegre}%
+      }
+      \strng{namehash}{f3cad1fa465b475ac8df065a58b9b9a0}
+      \strng{fullhash}{f3cad1fa465b475ac8df065a58b9b9a0}
+      \strng{fullhashraw}{f3cad1fa465b475ac8df065a58b9b9a0}
+      \strng{bibnamehash}{f3cad1fa465b475ac8df065a58b9b9a0}
+      \strng{authorbibnamehash}{f3cad1fa465b475ac8df065a58b9b9a0}
+      \strng{authornamehash}{f3cad1fa465b475ac8df065a58b9b9a0}
+      \strng{authorfullhash}{f3cad1fa465b475ac8df065a58b9b9a0}
+      \strng{authorfullhashraw}{f3cad1fa465b475ac8df065a58b9b9a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Conexões: educação, comunicação, inclusão e interculturalidade}
+      \field{title}{A Tecnologia Assistiva: de que se trata}
+      \field{volume}{1}
+      \field{year}{2009}
+      \field{pages}{207\bibrangedash 235}
+      \range{pages}{29}
+    \endentry
+    \entry{gonzalez2008digital}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=7cb8f4e89c09d4f4c4835040456dec30}{%
+           family={Gonzalez},
+           familyi={G\bibinitperiod},
+           given={R.C.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=c79d2a30ab5768295699433d91681131}{%
+           family={Woods},
+           familyi={W\bibinitperiod},
+           given={R.E.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{7e252c070638d1c9df5ecac3310a3d9e}
+      \strng{fullhash}{7e252c070638d1c9df5ecac3310a3d9e}
+      \strng{fullhashraw}{7e252c070638d1c9df5ecac3310a3d9e}
+      \strng{bibnamehash}{7e252c070638d1c9df5ecac3310a3d9e}
+      \strng{authorbibnamehash}{7e252c070638d1c9df5ecac3310a3d9e}
+      \strng{authornamehash}{7e252c070638d1c9df5ecac3310a3d9e}
+      \strng{authorfullhash}{7e252c070638d1c9df5ecac3310a3d9e}
+      \strng{authorfullhashraw}{7e252c070638d1c9df5ecac3310a3d9e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{3}
+      \field{isbn}{9780131687288}
+      \field{title}{Digital Image Processing}
+      \field{year}{2008}
+      \verb{urlraw}
+      \verb https://dl.ebooksworld.ir/motoman/Digital.Image.Processing.3rd.Edition.www.EBooksWorld.ir.pdf
+      \endverb
+      \verb{url}
+      \verb https://dl.ebooksworld.ir/motoman/Digital.Image.Processing.3rd.Edition.www.EBooksWorld.ir.pdf
+      \endverb
+    \endentry
+    \entry{connell2019ColorBlindness}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=ff020ee3c7d4c043937e6ea509806f81}{%
+           family={O'Connell},
+           familyi={O\bibinitperiod},
+           given={Krista},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{ff020ee3c7d4c043937e6ea509806f81}
+      \strng{fullhash}{ff020ee3c7d4c043937e6ea509806f81}
+      \strng{fullhashraw}{ff020ee3c7d4c043937e6ea509806f81}
+      \strng{bibnamehash}{ff020ee3c7d4c043937e6ea509806f81}
+      \strng{authorbibnamehash}{ff020ee3c7d4c043937e6ea509806f81}
+      \strng{authornamehash}{ff020ee3c7d4c043937e6ea509806f81}
+      \strng{authorfullhash}{ff020ee3c7d4c043937e6ea509806f81}
+      \strng{authorfullhashraw}{ff020ee3c7d4c043937e6ea509806f81}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{What You Need to Know About Color Blindness}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://www.healthline.com/health/color-blindness
+      \endverb
+      \verb{url}
+      \verb https://www.healthline.com/health/color-blindness
+      \endverb
+    \endentry
+    \entry{timjewell2023Tetrachromacy}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=4d891d9aea2f68d8bd198702c895950c}{%
+           family={Jewell},
+           familyi={J\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d891d9aea2f68d8bd198702c895950c}
+      \strng{fullhash}{4d891d9aea2f68d8bd198702c895950c}
+      \strng{fullhashraw}{4d891d9aea2f68d8bd198702c895950c}
+      \strng{bibnamehash}{4d891d9aea2f68d8bd198702c895950c}
+      \strng{authorbibnamehash}{4d891d9aea2f68d8bd198702c895950c}
+      \strng{authornamehash}{4d891d9aea2f68d8bd198702c895950c}
+      \strng{authorfullhash}{4d891d9aea2f68d8bd198702c895950c}
+      \strng{authorfullhashraw}{4d891d9aea2f68d8bd198702c895950c}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{12}
+      \field{title}{Tetrachromacy (‘Super Vision’)}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.healthline.com/health/tetrachromacy
+      \endverb
+      \verb{url}
+      \verb https://www.healthline.com/health/tetrachromacy
+      \endverb
+    \endentry
+    \entry{haralick1992computer}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=66d80b3b1c68fe14c878e56b6942be35}{%
+           family={Haralick},
+           familyi={H\bibinitperiod},
+           given={Robert\bibnamedelima M},
+           giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=ca7fc3d42366c890d5dd7fe4690380ef}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={Linda\bibnamedelima G},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-wesley Reading, MA}%
+      }
+      \strng{namehash}{c98538b6fbc43cb31186bcc963ed84ff}
+      \strng{fullhash}{c98538b6fbc43cb31186bcc963ed84ff}
+      \strng{fullhashraw}{c98538b6fbc43cb31186bcc963ed84ff}
+      \strng{bibnamehash}{c98538b6fbc43cb31186bcc963ed84ff}
+      \strng{authorbibnamehash}{c98538b6fbc43cb31186bcc963ed84ff}
+      \strng{authornamehash}{c98538b6fbc43cb31186bcc963ed84ff}
+      \strng{authorfullhash}{c98538b6fbc43cb31186bcc963ed84ff}
+      \strng{authorfullhashraw}{c98538b6fbc43cb31186bcc963ed84ff}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Computer and robot vision}
+      \field{volume}{1}
+      \field{year}{1992}
+    \endentry
+    \entry{anvisa2009RDC}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=c831de7ff4e042ac4c613bfbe93e8c00}{%
+           family={ANVISA},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{fullhash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{fullhashraw}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{bibnamehash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{authorbibnamehash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{authornamehash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{authorfullhash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{authorfullhashraw}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{month}{9}
+      \field{title}{RDC nº 47, 8 de setembro de 2009}
+      \field{year}{2009}
+      \verb{urlraw}
+      \verb http://www.crfsp.org.br/orientacao-farmaceutica/legislacao/113-juridico/legislacao/1699-resolucao-rdc-no-47-de-08-de-setembro-de-2009.html
+      \endverb
+      \verb{url}
+      \verb http://www.crfsp.org.br/orientacao-farmaceutica/legislacao/113-juridico/legislacao/1699-resolucao-rdc-no-47-de-08-de-setembro-de-2009.html
+      \endverb
+    \endentry
+    \entry{anvisa2020bulario}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=c831de7ff4e042ac4c613bfbe93e8c00}{%
+           family={ANVISA},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{fullhash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{fullhashraw}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{bibnamehash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{authorbibnamehash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{authornamehash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{authorfullhash}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \strng{authorfullhashraw}{c831de7ff4e042ac4c613bfbe93e8c00}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bulário Eletrônico}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://consultas.anvisa.gov.br/#/bulario/
+      \endverb
+      \verb{url}
+      \verb https://consultas.anvisa.gov.br/#/bulario/
+      \endverb
+    \endentry
+    \entry{landin2022bulario}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f3108361176582151ea3640bf6db83ab}{%
+           family={Landin},
+           familyi={L\bibinitperiod},
+           given={Iury},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{f3108361176582151ea3640bf6db83ab}
+      \strng{fullhash}{f3108361176582151ea3640bf6db83ab}
+      \strng{fullhashraw}{f3108361176582151ea3640bf6db83ab}
+      \strng{bibnamehash}{f3108361176582151ea3640bf6db83ab}
+      \strng{authorbibnamehash}{f3108361176582151ea3640bf6db83ab}
+      \strng{authornamehash}{f3108361176582151ea3640bf6db83ab}
+      \strng{authorfullhash}{f3108361176582151ea3640bf6db83ab}
+      \strng{authorfullhashraw}{f3108361176582151ea3640bf6db83ab}
+      \field{extraname}{1}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bulário Digital || Bulário Eletrônico}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/iuryLandin/bulario
+      \endverb
+      \verb{url}
+      \verb https://github.com/iuryLandin/bulario
+      \endverb
+    \endentry
+    \entry{landin2022api}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=f3108361176582151ea3640bf6db83ab}{%
+           family={Landin},
+           familyi={L\bibinitperiod},
+           given={Iury},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{f3108361176582151ea3640bf6db83ab}
+      \strng{fullhash}{f3108361176582151ea3640bf6db83ab}
+      \strng{fullhashraw}{f3108361176582151ea3640bf6db83ab}
+      \strng{bibnamehash}{f3108361176582151ea3640bf6db83ab}
+      \strng{authorbibnamehash}{f3108361176582151ea3640bf6db83ab}
+      \strng{authornamehash}{f3108361176582151ea3640bf6db83ab}
+      \strng{authorfullhash}{f3108361176582151ea3640bf6db83ab}
+      \strng{authorfullhashraw}{f3108361176582151ea3640bf6db83ab}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Bulário Digital || Bulário Eletrônico || API BR}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://github.com/iuryLandin/bulario-api
+      \endverb
+      \verb{url}
+      \verb https://github.com/iuryLandin/bulario-api
+      \endverb
+    \endentry
+    \entry{steffenon2020katie}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=17e47ee6c8baa772352732ed1fd21498}{%
+           family={Steffenon},
+           familyi={S\bibinitperiod},
+           given={Jaqueline\bibnamedelima Dahmer},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Universidade do Vale do Rio dos Sinos}%
+      }
+      \strng{namehash}{17e47ee6c8baa772352732ed1fd21498}
+      \strng{fullhash}{17e47ee6c8baa772352732ed1fd21498}
+      \strng{fullhashraw}{17e47ee6c8baa772352732ed1fd21498}
+      \strng{bibnamehash}{17e47ee6c8baa772352732ed1fd21498}
+      \strng{authorbibnamehash}{17e47ee6c8baa772352732ed1fd21498}
+      \strng{authornamehash}{17e47ee6c8baa772352732ed1fd21498}
+      \strng{authorfullhash}{17e47ee6c8baa772352732ed1fd21498}
+      \strng{authorfullhashraw}{17e47ee6c8baa772352732ed1fd21498}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{KATIE: modelo de tecnologia assistiva aplicando visão computacional para auxiliar pessoas com deficiência visual na identificação de medicamentos}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb http://www.repositorio.jesuita.org.br/bitstream/handle/UNISINOS/11044/Jaqueline%20Dahmer%20Steffenon.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.repositorio.jesuita.org.br/bitstream/handle/UNISINOS/11044/Jaqueline%20Dahmer%20Steffenon.pdf
+      \endverb
+    \endentry
+    \entry{gadenz2019desenvolvimento}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=b6885f3f1ddb8f096cfe5946a026d736}{%
+           family={Gadenz},
+           familyi={G\bibinitperiod},
+           given={Fabiano\bibnamedelima Michel},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Tecnológica Federal do Paraná}%
+      }
+      \strng{namehash}{b6885f3f1ddb8f096cfe5946a026d736}
+      \strng{fullhash}{b6885f3f1ddb8f096cfe5946a026d736}
+      \strng{fullhashraw}{b6885f3f1ddb8f096cfe5946a026d736}
+      \strng{bibnamehash}{b6885f3f1ddb8f096cfe5946a026d736}
+      \strng{authorbibnamehash}{b6885f3f1ddb8f096cfe5946a026d736}
+      \strng{authornamehash}{b6885f3f1ddb8f096cfe5946a026d736}
+      \strng{authorfullhash}{b6885f3f1ddb8f096cfe5946a026d736}
+      \strng{authorfullhashraw}{b6885f3f1ddb8f096cfe5946a026d736}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Desenvolvimento de um aplicativo para dispositivos móveis para uso de mapeamento de embalagens de medicamentos}
+      \field{type}{mathesis}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://repositorio.utfpr.edu.br/jspui/bitstream/1/12486/1/aplicativomapeamentoembalagensmedicamentos.pdf
+      \endverb
+      \verb{url}
+      \verb https://repositorio.utfpr.edu.br/jspui/bitstream/1/12486/1/aplicativomapeamentoembalagensmedicamentos.pdf
+      \endverb
+    \endentry
+    \entry{benjamim2012identificaccao}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=d59e5fb49671e80f37e8b51be8c32287}{%
+           family={Benjamim},
+           familyi={B\bibinitperiod},
+           given={Xiankleber\bibnamedelima Cavalcante},
+           giveni={X\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Federal do Rio Grande do Norte}%
+      }
+      \strng{namehash}{d59e5fb49671e80f37e8b51be8c32287}
+      \strng{fullhash}{d59e5fb49671e80f37e8b51be8c32287}
+      \strng{fullhashraw}{d59e5fb49671e80f37e8b51be8c32287}
+      \strng{bibnamehash}{d59e5fb49671e80f37e8b51be8c32287}
+      \strng{authorbibnamehash}{d59e5fb49671e80f37e8b51be8c32287}
+      \strng{authornamehash}{d59e5fb49671e80f37e8b51be8c32287}
+      \strng{authorfullhash}{d59e5fb49671e80f37e8b51be8c32287}
+      \strng{authorfullhashraw}{d59e5fb49671e80f37e8b51be8c32287}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Identificação Visual de Caixas de Medicamentos Usando Features Correspondentes}
+      \field{type}{mathesis}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://repositorio.ufrn.br/bitstream/123456789/15455/1/XiankleberCB_DISSERT.pdf
+      \endverb
+      \verb{url}
+      \verb https://repositorio.ufrn.br/bitstream/123456789/15455/1/XiankleberCB_DISSERT.pdf
+      \endverb
+    \endentry
+    \entry{rodrigues2022sisamed}{thesis}{}{}
+      \name{author}{1}{}{%
+        {{hash=cbfe0880bf41eed4d1c563a201852cf5}{%
+           family={Rodrigues},
+           familyi={R\bibinitperiod},
+           given={Jardson},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Universidade Fernando Pessoa (Portugal)}%
+      }
+      \strng{namehash}{cbfe0880bf41eed4d1c563a201852cf5}
+      \strng{fullhash}{cbfe0880bf41eed4d1c563a201852cf5}
+      \strng{fullhashraw}{cbfe0880bf41eed4d1c563a201852cf5}
+      \strng{bibnamehash}{cbfe0880bf41eed4d1c563a201852cf5}
+      \strng{authorbibnamehash}{cbfe0880bf41eed4d1c563a201852cf5}
+      \strng{authornamehash}{cbfe0880bf41eed4d1c563a201852cf5}
+      \strng{authorfullhash}{cbfe0880bf41eed4d1c563a201852cf5}
+      \strng{authorfullhashraw}{cbfe0880bf41eed4d1c563a201852cf5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SISAMED: Sistema de Baixo Custo de Apoio e Alerta à Toma de Medicação em Casa Recorrendo a Visão Computacional e Modelos Deep Learning}
+      \field{type}{phdthesis}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://bdigital.ufp.pt/bitstream/10284/10958/1/DM_37712.pdf
+      \endverb
+      \verb{url}
+      \verb https://bdigital.ufp.pt/bitstream/10284/10958/1/DM_37712.pdf
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

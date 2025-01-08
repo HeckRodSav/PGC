@@ -1,0 +1,13 @@
+The need for continuous-use medications has become increasingly common, especially with the increase in the population's longevity.
+Aging also brings with it more common problems related to vision, especially presbyopia, which can cause difficulty in reading.
+These factors together can bring about a new problem, where patients confuse medication packaging because they are visually similar.
+This work proposes a system capable of identifying and providing information about a medication, through the textual elements of the packaging, using computer vision.
+To this end, a system was built in Python that receives an image file and reads the text, using different color codes for this image, a method that has proven effective for identifying the terms in the image.
+If terms are found, the system classifies them and searches for them in \emph{Anvisa}'s \emph{Bulário Eletrônico}, which provides medicine leaflets, and, in the case of a valid response, loads the medicine leaflet file.
+To test this system, an image bank with photos of medications was built, with approximately \num{1200} images.
+During development, problems were noted with online access to the \emph{Bulário Eletrônico} portal, which is inaccessible at certain times of the day.
+Problems were also noted related to the orientation of the text in the images, where it was necessary to adjust some images for correct reading.
+The accuracy of the system for reading all or part of the terms of interest was just over \SI{80}{\percent} of the image bank, and of these terms, it was completely or partially successful in finding the file in more than \SI{85}{\percent} of the cases.
+These results were better than the approximately \SI{26}{\percent} of partial or correct readings achieved by a similar system that does not use different color codes, which shows the gain involved in performance through this method.
+
+\paragraph*{\textit{Keywords:}} \emph{Anvisa}; \emph{Bulário Eletrônico}; Assistive Technology; Digital Image Processing; Computer Vision; Optical Character Recognition; Python.

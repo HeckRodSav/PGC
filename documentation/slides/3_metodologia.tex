@@ -1,0 +1,499 @@
+\section{Metodologia}
+
+\subsection{Abordagem}
+\begin{frame}
+	\begin{figure}
+		\centering
+		\input{../pictures/fluxograma_alt}
+		\caption*{Fonte: Autor.}
+	\end{figure}
+\end{frame}
+
+\subsection{Carregar imagem}
+\begin{frame}{Foto do medicamento TYSABRI\textsuperscript{\small\textregistered}}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{BGR}
+				\includegraphics[width=0.75\textwidth]{../pictures/tysabri_bgr.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{RGB}
+				\includegraphics[width=0.75\textwidth]{../pictures/tysabri_rgb.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Ler texto}
+\begin{frame}{Filtragem inicial}
+	\vfill{\Large%
+	\begin{equation*}
+		\text{\lstinline[basicstyle=\ttfamily\Large]|conf|}_{\text{termo}} \geq 10\,\%
+	\end{equation*}
+	% \vspace*{\floatsep}
+	\vfill
+	\begin{equation*}
+		A_\text{termo} \geq \left\lfloor\frac{w_\text{img}\cdot h_\text{img}}{2500}\right\rfloor = \left\lfloor \left(w_\text{img} \cdot 2\,\%\right) \cdot \left(h_\text{img} \cdot 2\,\%\right) \right\rfloor
+	\end{equation*}
+	}\vfill%
+\end{frame}
+
+\begin{frame}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{Retângulo mínimo}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\centering
+			\begin{figure}
+				\centering
+				\caption*{Ampliação}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri cortado.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+			% \scalebox{\textwidth}{%
+				% \begin{equation*}\scriptstyle
+				% 	A_\text{termo} \geq \left\lfloor\frac{w_\text{img}\cdot h_\text{img}}{2500}\right\rfloor = \left\lfloor \left(w_\text{img} \cdot \SI{2}{\percent}\right) \cdot \left(h_\text{img} \cdot \SI{2}{\percent}\right) \right\rfloor
+				% \end{equation*}
+			% }
+		\end{column}
+	\end{columns}
+\end{frame}
+
+
+
+\begin{frame}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{RGB}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_rgb.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{Termos localizados}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_rgb_boxes.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\subsection{Gerar versões}
+\begin{frame}{Versões de codificação analisadas}
+	\begin{columns}
+		\begin{column}{0.45\textwidth}
+			\begin{itemize}
+					\item RGB;
+					\item CMYK;
+					\item HLS;
+					\item HSV;
+					\item YCrCb.
+				\end{itemize}
+		\end{column}
+		\begin{column}{0.45\textwidth}\centering
+			\begin{columns}
+				\begin{column}{0.5\textwidth}\centering
+					\captionof*{figure}{CMYK}
+					\includegraphics[height=0.3\textheight]{../pictures/tysabri_cmyk.jpg}
+
+					\captionof*{figure}{HSV}
+					\includegraphics[height=0.3\textheight]{../pictures/tysabri_HSV.jpg}
+				\end{column}
+				\begin{column}{0.5\textwidth}\centering
+					\captionof*{figure}{HLS}
+					\includegraphics[height=0.3\textheight]{../pictures/tysabri_HLS.jpg}
+
+					\captionof*{figure}{YCrCb}
+					\includegraphics[height=0.3\textheight]{../pictures/tysabri_YCrCb.jpg}
+				\end{column}
+			\end{columns}
+			\captionof*{figure}{Fonte: Autor.}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\begin{columns}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{Cinza}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_gray.jpg}
+			\\\vspace{\floatsep}
+			% \captionof*{figure}{Cinza}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_gray_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{R}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_r_only.jpg}
+			\\\vspace{\floatsep}
+			% \captionof*{figure}{R}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_r_only_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{G}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_g_only.jpg}
+			\\\vspace{\floatsep}
+			% \captionof*{figure}{G}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_g_only_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{B}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_b_only.jpg}
+			\\\vspace{\floatsep}
+			% \captionof*{figure}{B}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_b_only_boxes.jpg}
+		\end{column}
+	\end{columns}
+	\captionof*{figure}{Fonte: Autor.}
+\end{frame}
+
+
+\begin{frame}
+	\centering
+	\begin{columns}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{Cinza Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_gray_thresh.jpg}
+			\\\vspace{\floatsep}
+			% \captionof*{figure}{Cinza Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_gray_thresh_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{R Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_r_only_thresh.jpg}
+			\\\vspace{\floatsep}
+			% \captionof*{figure}{R Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_r_only_thresh_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{G Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_g_only_thresh.jpg}
+			\\\vspace{\floatsep}
+			% \captionof*{figure}{G Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_g_only_thresh_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{B Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_b_only_thresh.jpg}
+			\\\vspace{\floatsep}
+			% \captionof*{figure}{B Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_b_only_thresh_boxes.jpg}
+		\end{column}
+	\end{columns}
+	\captionof*{figure}{Fonte: Autor.}
+\end{frame}
+
+\begin{frame}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{RGB Thresh}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_rgb_thresh.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{Termos localizados}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_rgb_thresh_boxes.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{RGB Thresh Cinza}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_rgb_thresh_gray_thresh.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{Termos localizados}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_rgb_thresh_gray_thresh_boxes.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{CMYK}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_cmyk.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{Termos localizados}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_cmyk_boxes.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\begin{columns}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{C}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_c_only.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_c_only_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{M}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_m_only.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_m_only_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{Y}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_y_only.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_y_only_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{K}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_k_only.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_k_only_boxes.jpg}
+		\end{column}
+	\end{columns}
+	\captionof*{figure}{Fonte: Autor.}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\begin{columns}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{C Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_c_only_thresh.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_c_only_thresh_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{M Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_m_only_thresh.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_m_only_thresh_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{Y Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_y_only_thresh.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_y_only_thresh_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{K Thresh}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_k_only_thresh.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_cmyk_k_only_thresh_boxes.jpg}
+		\end{column}
+	\end{columns}
+	\captionof*{figure}{Fonte: Autor.}
+\end{frame}
+
+\begin{frame}
+	\begin{columns}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{CMYK Thresh}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_cmyk_thresh.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+		\begin{column}{0.5\textwidth}
+			\begin{figure}
+				\caption*{Termos localizados}
+				\includegraphics[width=0.85\textwidth]{../pictures/tysabri_cmyk_thresh_boxes.jpg}
+				\caption*{Fonte: Autor.}
+			\end{figure}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\begin{columns}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{R Thresh CMYK}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_r_thresh_recomposed_cmyk.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_r_thresh_recomposed_cmyk_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{G Thresh CMYK}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_g_thresh_recomposed_cmyk.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_g_thresh_recomposed_cmyk_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{B Thresh CMYK}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_b_thresh_recomposed_cmyk.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_b_thresh_recomposed_cmyk_boxes.jpg}
+		\end{column}
+		\begin{column}{0.24\textwidth}\centering
+			\captionof*{figure}{RGB Thresh CMYK}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_thresh_recomposed_cmyk.jpg}
+			\\\vspace{\floatsep}
+			\includegraphics[height=0.35\textheight]{../pictures/tysabri_rgb_thresh_recomposed_cmyk_boxes.jpg}
+		\end{column}
+	\end{columns}
+	\captionof*{figure}{Fonte: Autor.}
+\end{frame}
+
+\subsection{Ordenação e seleção de termos}
+\begin{frame}{Correção de termos com caracteres especiais}
+    \begin{figure}
+        \centering
+        \caption*{Medicamento MELAGRIÃO\textsuperscript{\small\textregistered}, registrado na Anvisa com caracteres especiais.}
+        \includegraphics[height=0.65\textheight]{../pictures/melagriao.jpg}
+        \caption*{Fonte: Autor.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Critérios para ordenação}
+	\begin{enumerate}
+		\item Largura: $\left\lfloor \sfrac{w_{\text{termo}}}{10} \right\rfloor$;
+		\item Quantidade de caracteres: $||\text{termo}||$;
+		\item Altura: $\left\lfloor \sfrac{h_\text{termo}}{10} \right\rfloor$;
+		\item Posição vertical: $(\textcolor{Black!25}{*}, y)_{\text{termo}}$;
+		\item Posição horizontal: $(x, \textcolor{Black!25}{*})_{\text{termo}}$;
+		\item Área: $\left\lfloor \sfrac{A_{\text{termo}}}{1000} \right\rfloor$;
+		\item Valor de confiabilidade;
+		\item Ordem lexicográfica;
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption*{Saída do sistema para medicamento TYSABRI\textsuperscript{\small\textregistered}, indicando a ordem de termos localizados, página 1.}
+        \includegraphics[height=0.72\textheight]{../pictures/terminal tysabri 1.jpg}
+        \caption*{Fonte: Autor.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption*{Saída do sistema para medicamento TYSABRI\textsuperscript{\small\textregistered}, indicando a ordem de termos localizados, página 2.}
+        \includegraphics[height=0.72\textheight]{../pictures/terminal tysabri 2.jpg}
+        \caption*{Fonte: Autor.}
+    \end{figure}
+\end{frame}
+
+
+\subsection{Buscar no Bulário Eletrônico}
+\begin{frame}
+    \begin{figure}
+		\centering
+		\caption*{Página de resultados de consulta ao Bulário Eletrônico da Anvisa, medicamento TYSABRI\textsuperscript{\small\textregistered}.}
+        \includegraphics[width=0.85\textwidth]{../pictures/bulario_resultado.png}
+        \caption*{Fonte: \href{https://consultas.Anvisa.gov.br/\#/bulario/q/?nomeProduto=TYSABRI}{Portal da Anvisa}, acesso em 2023-09-06.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption*{Saída do sistema para busca dos primeiros termos.}
+        \includegraphics[height=0.72\textheight]{../pictures/terminal tysabri busca 1.jpg}
+        \caption*{Fonte: Autor.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\centering
+		\caption*{Saída do sistema indicando o candidato escolhido.}
+		\includegraphics[height=0.72\textheight]{../pictures/terminal tysabri escolhido 2.jpg}
+		\caption*{Fonte: Autor.}
+	\end{figure}
+\end{frame}
+
+\subsection{Carregar o arquivo}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption*{Saída do sistema indicando arquivo \lstinline|TYSABRI.pdf| carregado.}
+        \includegraphics[height=0.72\textheight]{../pictures/terminal tysabri carregado.jpg}
+        \caption*{Fonte: Autor.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\captionof*{figure}{Bula do medicamento TYSABRI\textsuperscript{\small\textregistered}, páginas 1, 2 e 3.}
+	{%
+	\setlength{\fboxsep}{0pt}%
+	\setlength{\fboxrule}{0.5pt}%
+	\begin{columns}
+		\begin{column}{0.33\textwidth}
+			\centering
+			\fbox{\includegraphics[page=1,keepaspectratio, width=0.99\textwidth, height=0.65\textheight]{../pictures/TYSABRI.pdf}}
+		\end{column}
+		\begin{column}{0.33\textwidth}
+			\centering
+			\fbox{\includegraphics[page=2,keepaspectratio, width=0.99\textwidth, height=0.65\textheight]{../pictures/TYSABRI.pdf}}
+		\end{column}
+		\begin{column}{0.33\textwidth}
+			\centering
+			\fbox{\includegraphics[page=3,keepaspectratio, width=0.99\textwidth, height=0.65\textheight]{../pictures/TYSABRI.pdf}}
+		\end{column}
+	\end{columns}
+	}%
+	\captionof*{figure}{Fonte: \href{https://consultas.anvisa.gov.br/api/consulta/medicamentos/arquivo/bula/parecer/eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyNTkzODYyNyIsIm5iZiI6MTczNDQ1NjIyNCwiZXhwIjoxNzM0NDU2NTI0fQ.T6QyZKj7_-IAJncoyy-ptBxCKaedFaXcrIS59oxsXhQwEcz4dJl9_w-38H03b0H9KvNND2-I9TZn9nggz4oMDQ/?Authorization=}{TYSABRI: Solução concentrada para infusão intravenosa. Responsável técnico Mara Oliveira. São Paulo: Biogen Brasil Produtos Farmacêuticos Ltda., 2024. Via Bulário Eletrônico Anvisa. Acesso em: 2024-12-17.}
+	}
+\end{frame}
+
+\subsection{Tratamento de exceções}
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption*{Saída do sistema para diversos casos de erro.}
+        \includegraphics[height=0.72\textheight]{../pictures/terminal tysabri try.jpg}
+        \caption*{Fonte: Autor.}
+    \end{figure}
+\end{frame}
+
+\begin{frame}
+	\begin{figure}
+		\centering
+		\caption*{Saída do sistema indicando alguns erros e o candidato escolhido.}
+		\includegraphics[height=0.72\textheight]{../pictures/terminal tysabri escolhido.jpg}
+		\caption*{Fonte: Autor.}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+    \begin{figure}
+        \centering
+        \caption*{Saída do sistema para casos de erro ao carregar arquivo.}
+        \includegraphics[height=0.72\textheight]{../pictures/terminal tysabri carregar erro.jpg}
+        \caption*{Fonte: Autor.}
+    \end{figure}
+\end{frame}
+

@@ -1,0 +1,100 @@
+\documentclass[12pt, openany]{report}
+% \documentclass[12pt,showframe, openleft]{report}
+
+% https://titospadini.medium.com/sugestões-para-um-bom-trabalho-de-graduação-em-engenharia-81fcb0ae263d
+
+\input{../template/template}
+\input{../capa}
+\input{../commands}
+
+% \newcommand{\chapter}[1]{#1}
+
+\input{../acronyms}
+\bibliography{../reference.bib}
+
+\begin{document}
+    \capa
+
+    \folhaDeRosto
+
+    \folhaAgradecimentos
+
+    % \folhaDeAprovacao
+    \begin{abstract}%
+    %
+        \input{../chapter/0_resumo}%
+    %
+    \end{abstract}
+
+    \begin{otherlanguage}{english}\itshape
+        \begin{abstract}%
+        %
+            \input{../chapter/0_1_abstract}%
+        %
+        \end{abstract}
+    \end{otherlanguage}
+
+    % \begingroup
+    \pagestyle{toc}
+
+    \listoffigures
+
+    \listoftables
+
+    \lstlistoflistings
+
+    % \addcontentsline{toc}{chapter}{Abreviaturas e Siglas}
+    \noindent\printacronyms[display=all]
+    \clearpage
+
+    \tableofcontents % Sumário
+    % \pagebreak
+    \clearpage
+
+    % \endgroup
+
+    \pagestyle{main}
+    \input{../chapter/1_intro}
+    \input{../chapter/2_revisao_bib}
+    \input{../chapter/3_metodologia}
+    \input{../chapter/4_resultados}
+    \input{../chapter/5_conclusao}
+
+    % \nocite{*}
+    \printbibliography[heading=bibintoc, title={Referências}]
+
+    \clearpage
+    \phantomsection % Corrigir posição do link no sumário
+    \addcontentsline{toc}{chapter}{Apêndices}
+    \appendix
+
+    \input{../chapter/apdx_codigo}
+
+\end{document}
+
+
+% . Introdução
+
+%     - Introdução do cenário de estudo e apresentação/motivação do tema do trabalho neste contexto
+
+% . Objetivos principais e secundarios
+
+% . Revisão bibliográfica de trabalhos correlatos
+
+%     - 3 a 4 trabalhos e 1 paragrafo por trabalho
+%     - Ao final, mostrar que o tema escolhido tem relevancia de estudo etc
+
+% . Fundamentos do tema
+
+%     - Pode ser quebrado em mais de um capítulo (por exemplo, capítulo sobre lançamento de foguetes, tecnicas de monitiramento e controle,  sistemas embarcados etc)
+%     - Descrição das tecnologias e técnicas que serão estudadas e analizadas
+
+% . Análise de resultados
+
+%     - Eu acho muito importante no TG1 já começar as análises e obter/apresentar algum resultado preliminar do estudo.
+
+% . Conclusão
+
+% .  Anexos
+
+% . Referências bibliográficas

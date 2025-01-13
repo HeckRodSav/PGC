@@ -101,6 +101,7 @@ O \autoref{cod:ler:2} apresenta a continuação da lógica simplificada envolvid
 Além da análise realizada na versão codificada em \ac{RGB} da imagem, também são analisadas variantes em codificação de cores nessa imagem, além da versão em escala de cinza.
 Para cada codificação, são analisadas suas componentes separadamente.
 Caso duas componentes encontrem palavras iguais, é mantida na lista a versão com maior valor de confiabilidade.
+As diversas componentes das codificações analisadas viabilizam a localização de novos termos, já que cada uma trará um novo perfil de contraste à imagem.
 
 Em cada componente analisada, é aplicado um método de limiar para binarização dos valores.
 As componentes binarizadas são utilizadas para recompor a imagem completa da codificação em questão e essa nova versão também é analisada.
@@ -116,9 +117,41 @@ As codificações analisadas foram:
 
 A conversão para as versões HLS, HSV e YCrCb foi realizada através da função \lstinline|cvtColor|, da biblioteca de processamento de imagem \textit{OpenCV}, essa função converte a codificação de cores utilizada na imagem \cite{CV2cvtColor}.
 A versão \ac{CMYK} é convertida utilizando as equações pertinentes.
+A \autoref{fig:foto:codf} ilustra as demais codificações utilizadas.
+
+\begin{figure}[htb]
+    \centering
+    \caption{Exemplo de foto do medicamento TYSABRI\textsuperscript{\tiny\textregistered} em diferentes codificações de cores.}
+    \begin{subfigure}[t]{0.22\textwidth}
+        \centering
+        \caption{CMYK.}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.22\textwidth}
+        \centering
+        \caption{HLS.}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_HLS.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.22\textwidth}
+        \centering
+        \caption{HSV.}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_HSV.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.22\textwidth}
+        \centering
+        \caption{YCrCb.}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_YCrCb.jpg}
+    \end{subfigure}
+    \caption*{Fonte: Autor.}
+    \label{fig:foto:codf}
+\end{figure}
 
 A binarização por limiar das componentes é realizada pela função \textit{threshold}, da biblioteca de processamento de imagem \textit{OpenCV}, utilizando o método de Otsu \cite{CV2threshold}.
 O \autoref{cod:versoes} apresenta uma simplificação da estrutura utilizada.
+As Figuras \ref{fig:foto:versoes:1}, \ref{fig:foto:versoes:2} e \ref{fig:foto:versoes:3} apresentam exemplos de componentes analisadas, destacando os termos encontrados em cada uma.
 
 
 \begin{lstfloat}[htbp]
@@ -126,6 +159,371 @@ O \autoref{cod:versoes} apresenta uma simplificação da estrutura utilizada.
     \lstinputlisting[label=cod:versoes, caption={Gerar versões das imagens, simplificado.}]{../code/ex_versoes.py}
     \caption*{Fonte: Autor.}
 \end{lstfloat}
+
+\begin{figure}[htb]
+    \centering
+    \caption{Exemplos de componentes analisadas cinza e RGB (%
+    \subref{fig:foto:versoes:1:Cinza},
+    \subref{fig:foto:versoes:1:R},
+    \subref{fig:foto:versoes:1:G},
+    \subref{fig:foto:versoes:1:B},
+    \subref{fig:foto:versoes:1:Cinza_thresh},
+    \subref{fig:foto:versoes:1:R_thresh},
+    \subref{fig:foto:versoes:1:G_thresh},
+    \subref{fig:foto:versoes:1:B_thresh}%
+    ) e destaque nos termos localizados em cada componente (%
+    \subref{fig:foto:versoes:1:Cinza:boxes},
+    \subref{fig:foto:versoes:1:R:boxes},
+    \subref{fig:foto:versoes:1:G:boxes},
+    \subref{fig:foto:versoes:1:B:boxes},
+    \subref{fig:foto:versoes:1:Cinza_thresh:boxes},
+    \subref{fig:foto:versoes:1:R_thresh:boxes},
+    \subref{fig:foto:versoes:1:G_thresh:boxes},
+    \subref{fig:foto:versoes:1:B_thresh:boxes}%
+    ).}
+    % \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{Cinza.}
+        \label{fig:foto:versoes:1:Cinza}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_gray.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{R.}
+        \label{fig:foto:versoes:1:R}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_r_only.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{G.}
+        \label{fig:foto:versoes:1:G}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_g_only.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{B.}
+        \label{fig:foto:versoes:1:B}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_b_only.jpg}
+    \end{subfigure}
+    \\\vspace{\floatsep}
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{Cinza.}
+        \label{fig:foto:versoes:1:Cinza:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_gray_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{R.}
+        \label{fig:foto:versoes:1:R:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_r_only_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{G.}
+        \label{fig:foto:versoes:1:G:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_g_only_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{B.}
+        \label{fig:foto:versoes:1:B:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_b_only_boxes.jpg}
+    \end{subfigure}
+    \\\vspace{\floatsep}
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{Cinza thresh.}
+        \label{fig:foto:versoes:1:Cinza_thresh}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_gray_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{R thresh.}
+        \label{fig:foto:versoes:1:R_thresh}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_r_only_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{G thresh.}
+        \label{fig:foto:versoes:1:G_thresh}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_g_only_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{B thresh.}
+        \label{fig:foto:versoes:1:B_thresh}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_b_only_thresh.jpg}
+    \end{subfigure}
+    \\\vspace{\floatsep}
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{Cinza thresh.}
+        \label{fig:foto:versoes:1:Cinza_thresh:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_gray_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{R thresh.}
+        \label{fig:foto:versoes:1:R_thresh:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_r_only_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{G thresh.}
+        \label{fig:foto:versoes:1:G_thresh:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_g_only_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{B thresh.}
+        \label{fig:foto:versoes:1:B_thresh:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_b_only_thresh_boxes.jpg}
+    \end{subfigure}
+    \caption*{Fonte: Autor.}
+    \label{fig:foto:versoes:1}
+\end{figure}
+
+
+\begin{figure}[htb]
+    \centering
+    \caption{Exemplos de componentes analisadas CMYK (%
+    \subref{fig:foto:versoes:2:C},
+    \subref{fig:foto:versoes:2:M},
+    \subref{fig:foto:versoes:2:Y},
+    \subref{fig:foto:versoes:2:K},
+    \subref{fig:foto:versoes:2:C_thresh},
+    \subref{fig:foto:versoes:2:M_thresh},
+    \subref{fig:foto:versoes:2:Y_thresh},
+    \subref{fig:foto:versoes:2:K_thresh}%
+    ) e destaque nos termos localizados em cada componente (%
+    \subref{fig:foto:versoes:2:C:boxes},
+    \subref{fig:foto:versoes:2:M:boxes},
+    \subref{fig:foto:versoes:2:Y:boxes},
+    \subref{fig:foto:versoes:2:K:boxes},
+    \subref{fig:foto:versoes:2:C_thresh:boxes},
+    \subref{fig:foto:versoes:2:M_thresh:boxes},
+    \subref{fig:foto:versoes:2:Y_thresh:boxes},
+    \subref{fig:foto:versoes:2:K_thresh:boxes}%
+    ).}
+    % \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{C.}
+        \label{fig:foto:versoes:2:C}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_c_only.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{M.}
+        \label{fig:foto:versoes:2:M}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_m_only.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{Y.}
+        \label{fig:foto:versoes:2:Y}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_y_only.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{K.}
+        \label{fig:foto:versoes:2:K}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_k_only.jpg}
+    \end{subfigure}
+    \\\vspace{\floatsep}
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{C.}
+        \label{fig:foto:versoes:2:C:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_c_only_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{M.}
+        \label{fig:foto:versoes:2:M:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_m_only_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{Y.}
+        \label{fig:foto:versoes:2:Y:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_y_only_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{K.}
+        \label{fig:foto:versoes:2:K:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_k_only_boxes.jpg}
+    \end{subfigure}
+    \\\vspace{\floatsep}
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{C thresh.}
+        \label{fig:foto:versoes:2:C_thresh}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_c_only_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{M thresh.}
+        \label{fig:foto:versoes:2:M_thresh}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_m_only_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{Y thresh.}
+        \label{fig:foto:versoes:2:Y_thresh}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_y_only_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{K thresh.}
+        \label{fig:foto:versoes:2:K_thresh}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_k_only_thresh.jpg}
+    \end{subfigure}
+    \\\vspace{\floatsep}
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{C thresh.}
+        \label{fig:foto:versoes:2:C_thresh:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_c_only_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{M thresh.}
+        \label{fig:foto:versoes:2:M_thresh:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_m_only_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{Y thresh.}
+        \label{fig:foto:versoes:2:Y_thresh:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_y_only_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.21\textwidth}
+        \centering
+        \caption{K thresh.}
+        \label{fig:foto:versoes:2:K_thresh:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_k_only_thresh_boxes.jpg}
+    \end{subfigure}
+    \caption*{Fonte: Autor.}
+    \label{fig:foto:versoes:2}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{figure}[htb]
+    \centering
+    \caption{Exemplos de componentes analisadas recompondo componentes de \textit{threshold} (%
+    \subref{fig:foto:versoes:2:RGB},
+    \subref{fig:foto:versoes:2:RGB_Cinza},
+    \subref{fig:foto:versoes:2:CMYK},
+    \subref{fig:foto:versoes:2:RGB_CMYK}%
+    ) e destaque nos termos localizados em cada componente (%
+    \subref{fig:foto:versoes:2:RGB:boxes},
+    \subref{fig:foto:versoes:2:RGB_Cinza:boxes},
+    \subref{fig:foto:versoes:2:CMYK:boxes},
+    \subref{fig:foto:versoes:2:RGB_CMYK:boxes}%
+    ).}
+    % \hfill
+    \begin{subfigure}[b]{0.21\textwidth}
+        \centering
+        \caption{RGB.}
+        \label{fig:foto:versoes:2:RGB}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.21\textwidth}
+        \centering
+        \caption{RGB Cinza.}
+        \label{fig:foto:versoes:2:RGB_Cinza}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_thresh_gray_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.21\textwidth}
+        \centering
+        \caption{CMYK.}
+        \label{fig:foto:versoes:2:CMYK}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_thresh.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.21\textwidth}
+        \centering
+        \caption{RGB CMYK.}
+        \label{fig:foto:versoes:2:RGB_CMYK}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_thresh_recomposed_cmyk.jpg}
+    \end{subfigure}
+    \\\vspace{\floatsep}
+    \begin{subfigure}[b]{0.21\textwidth}
+        \centering
+        \caption{RGB.}
+        \label{fig:foto:versoes:2:RGB:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.21\textwidth}
+        \centering
+        \caption{RGB Cinza.}
+        \label{fig:foto:versoes:2:RGB_Cinza:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_thresh_gray_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.21\textwidth}
+        \centering
+        \caption{CMYK.}
+        \label{fig:foto:versoes:2:CMYK:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_cmyk_thresh_boxes.jpg}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.21\textwidth}
+        \centering
+        \caption{RGB CMYK.}
+        \label{fig:foto:versoes:2:RGB_CMYK:boxes}
+        \includegraphics[width=\linewidth]{../pictures/tysabri_rgb_thresh_recomposed_cmyk_boxes.jpg}
+    \end{subfigure}
+    \caption*{Fonte: Autor.}
+    % \hfill
+    \label{fig:foto:versoes:3}
+\end{figure}
 
 Os termos encontrados são adicionados a uma única lista, é possível que o mesmo tempo seja localizado em versões diferentes de imagem. Neste caso, é escolhida a versão com maior parâmetro de confiabilidade.
 
